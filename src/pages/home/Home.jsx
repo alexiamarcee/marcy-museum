@@ -1,5 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import ExhibitionCard from "../../components/exhibition-card/ExhibitionCard";
+import exhibitions from "../../data/exhibitions";
 import "leaflet/dist/leaflet.css";
 import "./Home.css";
 
@@ -33,7 +34,7 @@ function Home() {
         </div>
         
         <div className="exhibitions-grid">
-          {exhibitionsData.map((exhibition) => (
+          {exhibitions.map((exhibition) => (
             <ExhibitionCard
               key={exhibition.id}
               title={exhibition.title}

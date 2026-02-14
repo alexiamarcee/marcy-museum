@@ -1,32 +1,8 @@
 import ExhibitionCard from "../../components/exhibition-card/ExhibitionCard";
+import exhibitions from "../../data/exhibitions";
 import "./Exhibitions.css";
 
-// Extended exhibition data
-const allExhibitions = [
-    {
-      id: 1,
-      title: "Silly Cat",
-      artist: "Karen",
-      description: "Silliest of them all.",
-      image: silly
-    },
-    {
-      id: 2,
-      title: "Duck with a hat",
-      artist: "Daniel",
-      description: "All hat and no cattle.",
-      image: duck
-    },
-    {
-      id: 3,
-      title: "Hungry dog",
-      artist: "Alex",
-      description: "Fattie dof spotted.",
-      image: dog
-    }
-  ];
-
-    function Exhibitions() {
+function Exhibitions() {
   return (
     <div className="exhibitions-page">
       
@@ -45,7 +21,7 @@ const allExhibitions = [
       <section className="exhibitions-content">
         <div className="exhibitions-container">
           <div className="exhibitions-grid">
-            {allExhibitions.map((exhibition) => (
+            {exhibitions.map((exhibition) => (
               <ExhibitionCard
                 key={exhibition.id}
                 title={exhibition.title}
