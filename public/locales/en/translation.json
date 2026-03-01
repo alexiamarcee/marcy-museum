@@ -1,0 +1,48 @@
+{
+  "nav": {
+    "home": "Home",
+    "exhibitions": "Exhibitions",
+    "visit": "Visit",
+    "contact": "Contact"
+  },
+  "footer": {
+    "description": "A contemporary art museum dedicated to creative expression and cultural innovation, showcasing diverse artistic voices from around the world.",
+    "navigation": "Navigation",
+    "resources": "Resources",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookies Policy",
+    "terms": "Terms & Conditions"
+  },
+  "exhibitions": {
+    "title": "Our Exhibitions",
+    "description": "Discover our diverse collection of contemporary artworks from talented artists around the world. Each exhibition offers a unique perspective and invites you to explore new dimensions of creativity.",
+    "planVisit": "Plan Your Visit",
+    "planVisitDesc": "Experience these exhibitions in person at Marcy Museum. Open Tuesday through Sunday, 10:00 AM - 7:00 PM.",
+    "visitInfo": "Visit Information",
+    "currentExhibitions": "Current Exhibitions",
+    "currentDesc": "Explore our carefully selected exhibitions showcasing diverse artistic voices and perspectives.",
+    "artworks": {
+      "1": { "title": "Silly Cat", "description": "Silliest of them all" },
+      "2": { "title": "Duck with a hat", "description": "All hat and no cattle" },
+      "3": { "title": "Hungry dog", "description": "Fattie dog spotted" }
+    }
+  },
+  "visit": {
+    "address": "Address",
+    "hours": "Hours",
+    "hoursDetail": "Tuesday - Sunday",
+    "contact": "Contact",
+    "findUs": "Find Us",
+    "findUsDesc": "Visit us at our location in Las Palmas de Gran Canaria"
+  },
+  "hero": {
+    "title": "Welcome to Marcy Museum",
+    "subtitle": "Where contemporary art meets innovation and creativity knows no bounds.",
+    "description": "Discover our curated collection of exhibitions featuring artists from around the world."
+  },
+  "foro": { 
+    "title": "Community Forum", 
+    "description": "Share your thoughts about our exhibitions." }
+}

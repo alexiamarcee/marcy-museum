@@ -1,0 +1,48 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "exhibitions": "Expositions",
+    "visit": "Visite",
+    "contact": "Contact"
+  },
+  "footer": {
+    "description": "Un musée d'art contemporain dédié à l'expression créative et à l'innovation culturelle, présentant des voix artistiques diverses du monde entier.",
+    "navigation": "Navigation",
+    "resources": "Ressources",
+    "followUs": "Suivez-nous",
+    "rights": "Tous droits réservés.",
+    "privacy": "Politique de Confidentialité",
+    "cookies": "Politique des Cookies",
+    "terms": "Conditions Générales"
+  },
+  "exhibitions": {
+    "title": "Nos Expositions",
+    "description": "Découvrez notre collection d'œuvres d'art contemporain d'artistes talentueux du monde entier. Chaque exposition offre une perspective unique.",
+    "planVisit": "Planifiez Votre Visite",
+    "planVisitDesc": "Vivez ces expositions en personne au Musée Marcy. Ouvert du mardi au dimanche, 10h00 - 19h00.",
+    "visitInfo": "Informations de Visite",
+    "currentExhibitions": "Expositions Actuelles",
+    "currentDesc": "Explorez nos expositions soigneusement sélectionnées mettant en valeur diverses voix artistiques.",
+    "artworks": {
+      "1": { "title": "Chat silly", "description": "Le plus fou de tous" },
+      "2": { "title": "Canard avec chapeau", "description": "Tout chapeau, rien d'autre" },
+      "3": { "title": "Chien affamé", "description": "Gros chien repéré" }
+    }
+  },
+  "visit": {
+    "address": "Adresse",
+    "hours": "Horaires",
+    "hoursDetail": "Mardi - Dimanche",
+    "contact": "Contact",
+    "findUs": "Nous Trouver", 
+    "findUsDesc": "Visitez-nous à Las Palmas de Gran Canaria"
+  },
+  "hero": {
+    "title": "Bienvenue au Musée Marcy",
+    "subtitle": "Là où l'art contemporain rencontre l'innovation et où la créativité ne connaît pas de limites.",
+    "description": "Découvrez notre collection d'expositions avec des artistes du monde entier."
+  },
+  "foro": { 
+    "title": "Forum Communautaire", 
+    "description": "Partagez vos impressions sur nos expositions." }
+}

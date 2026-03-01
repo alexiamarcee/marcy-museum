@@ -1,18 +1,20 @@
+import { useTranslation } from "react-i18next";
 import ExhibitionCard from "../../components/exhibition-card/ExhibitionCard";
 import exhibitions from "../../data/exhibitions";
 import "./Exhibitions.css";
 
 function Exhibitions() {
+  const { t } = useTranslation();
+
   return (
     <div className="exhibitions-page">
       
       {/* Page Header */}
       <section className="exhibitions-header">
         <div className="header-content">
-          <h1 className="page-title">Our Exhibitions</h1>
+          <h1 className="page-title">{t("exhibitions.title")}</h1>
           <p className="page-description">
-            Discover our diverse collection of contemporary artworks from talented artists around the world. 
-            Each exhibition offers a unique perspective and invites you to explore new dimensions of creativity.
+            {t("exhibitions.description")}
           </p>
         </div>
       </section>
@@ -37,13 +39,10 @@ function Exhibitions() {
       {/* Call to Action */}
       <section className="exhibitions-cta">
         <div className="cta-content">
-          <h2>Plan Your Visit</h2>
-          <p>
-            Experience these exhibitions in person at Marcy Museum. 
-            Open Tuesday through Sunday, 10:00 AM - 7:00 PM.
-          </p>
+          <h2>{t("exhibitions.planVisit")}</h2>
+          <p>{t("exhibitions.planVisitDesc")}</p>
           <a href="/visit" className="cta-button">
-            Visit Information
+            {t("exhibitions.visitInfo")}
           </a>
         </div>
       </section>

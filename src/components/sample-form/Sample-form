@@ -1,0 +1,16 @@
+import ModuleContainer from "components/shared/moduleContainer/ModuleContainer";
+import { useTranslation } from "react-i18next";
+
+function SampleForm() {
+  const { t } = useTranslation();
+  return (
+    <>
+      <ModuleContainer title={"Sample Form"} hideBackButton={true}>
+        <p>{t("hello")}</p>
+        <p>{t("cancel")}</p>
+      </ModuleContainer>
+    </>
+  );
+}
+
+export default SampleForm;

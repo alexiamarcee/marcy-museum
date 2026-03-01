@@ -8,6 +8,7 @@ import PrivacyPolicy from "./pages/policy/PrivacyPolicy";
 import CookiesPolicy from "./pages/policy/CookiesPolicy";
 import Terms from "./pages/policy/Terms";
 import Contact from "./pages/policy/Contact";
+import Foro from "./components/foro/Foro";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/exhibitions" element={<Exhibitions />} />
           <Route path="/visit" element={<Visit />} />
+          <Route path="/foro" element={<Foro />} /> 
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/cookies" element={<CookiesPolicy />} />
           <Route path="/terms" element={<Terms />} />

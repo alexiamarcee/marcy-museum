@@ -1,8 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { FaInstagram, FaFacebook, FaTwitter, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Footer.css";
 
 function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -12,22 +14,19 @@ function Footer() {
           
           <div className="footer-column footer-about">
             <h3>Marcy National Museum</h3>
-            <p>
-              A contemporary art museum dedicated to creative expression and cultural innovation, 
-              showcasing diverse artistic voices from around the world.
-            </p>
+            <p>{t("footer.description")}</p>
           </div>
 
           <div className="footer-column">
-            <h4>Navigation</h4>
-            <Link to="/home">Home</Link>
-            <Link to="/exhibitions">Exhibitions</Link>
-            <Link to="/visit">Visit</Link>
-            <Link to="/contact">Contact</Link>
+            <h4>{t("footer.navigation")}</h4>
+            <Link to="/home">{t("nav.home")}</Link>
+            <Link to="/exhibitions">{t("nav.exhibitions")}</Link>
+            <Link to="/visit">{t("nav.visit")}</Link>
+            <Link to="/contact">{t("nav.contact")}</Link>
           </div>
 
           <div className="footer-column">
-            <h4>Resources</h4>
+            <h4>{t("footer.resources")}</h4>
             <a 
               href="https://github.com/alexiamarcee/marcy-museum" 
               target="_blank" 
@@ -45,7 +44,7 @@ function Footer() {
           </div>
 
           <div className="footer-column">
-            <h4>Follow Us</h4>
+            <h4>{t("footer.followUs")}</h4>
             <div className="social-icons">
               <a 
                 href="https://www.instagram.com/" 
@@ -87,7 +86,7 @@ function Footer() {
         <div className="footer-bottom">
           <div className="footer-legal">
             <p className="copyright">
-              © {currentYear} Marcy National Museum. All rights reserved.
+              © {currentYear} Marcy National Museum. {t("footer.rights")}
             </p>
             <p className="address">
               Avenida de Canarias s/n, Las Palmas de Gran Canaria, 35100 | 
@@ -96,13 +95,13 @@ function Footer() {
           </div>
           
           <nav className="footer-legal-links" aria-label="Legal information">
-            <Link to="/privacy">Privacy Policy</Link>
+            <Link to="/privacy">{t("footer.privacy")}</Link>
             <span className="separator">|</span>
-            <Link to="/cookies">Cookies Policy</Link>
+            <Link to="/cookies">{t("footer.cookies")}</Link>
             <span className="separator">|</span>
-            <Link to="/terms">Terms & Conditions</Link>
+            <Link to="/terms">{t("footer.terms")}</Link>
             <span className="separator">|</span>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">{t("nav.contact")}</Link>
           </nav>
         </div>
       </div>

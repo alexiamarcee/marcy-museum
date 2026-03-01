@@ -3,7 +3,6 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./Visit.css";
 
-// Museum coordinates
 const MUSEUM_LOCATION = {
   lat: 28.1235,
   lng: -15.4363,

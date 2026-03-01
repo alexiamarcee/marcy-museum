@@ -1,0 +1,48 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "exhibitions": "Exposiciones",
+    "visit": "Visitar",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "description": "Un museo de arte contemporáneo dedicado a la expresión creativa y la innovación cultural, con voces artísticas diversas de todo el mundo.",
+    "navigation": "Navegación",
+    "resources": "Recursos",
+    "followUs": "Síguenos",
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "cookies": "Política de Cookies",
+    "terms": "Términos y Condiciones"
+  },
+  "exhibitions": {
+    "title": "Nuestras Exposiciones",
+    "description": "Descubre nuestra diversa colección de obras de arte contemporáneo de artistas talentosos de todo el mundo. Cada exposición ofrece una perspectiva única.",
+    "planVisit": "Planifica tu Visita",
+    "planVisitDesc": "Vive estas exposiciones en persona en el Museo Marcy. Abierto de martes a domingo, 10:00 - 19:00.",
+    "visitInfo": "Información de Visita",
+    "currentExhibitions": "Exposiciones Actuales",
+    "currentDesc": "Explora nuestras exposiciones seleccionadas con diversas voces y perspectivas artísticas.",
+    "artworks": {
+      "1": { "title": "Gato tonto", "description": "El más tonto de todos" },
+      "2": { "title": "Pato con sombrero", "description": "Todo sombrero y nada más" },
+      "3": { "title": "Perro hambriento", "description": "Perro gordito avistado" }
+    }
+  },
+  "visit": {
+    "address": "Dirección",
+    "hours": "Horario",
+    "hoursDetail": "Martes - Domingo",
+    "contact": "Contacto",
+    "findUs": "Encuéntranos", 
+    "findUsDesc": "Visítanos en Las Palmas de Gran Canaria"
+  },
+  "hero": {
+    "title": "Bienvenido al Museo Marcy",
+    "subtitle": "Donde el arte contemporáneo se encuentra con la innovación y la creatividad no tiene límites.",
+    "description": "Descubre nuestra colección de exposiciones con artistas de todo el mundo."
+  },
+  "foro": { 
+    "title": "Foro de la Comunidad", 
+    "description": "Comparte tu opinión sobre nuestras exposiciones." }
+}

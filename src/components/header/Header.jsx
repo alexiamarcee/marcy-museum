@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import LocaleSwitcher from "../../i18n/LocaleSwitcher";
 import "./Header.css";
 
 function Header() {
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -36,31 +39,30 @@ function Header() {
         <nav className={`nav-menu ${isMenuOpen ? "is-open" : ""}`}>
           <NavLink
             to="/home"
-            className={({ isActive }) =>
-              isActive ? "nav-link active" : "nav-link"
-            }
+            className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
             onClick={closeMenu}
           >
-            Home
+            {t("nav.home")}
           </NavLink>
           <NavLink
             to="/exhibitions"
-            className={({ isActive }) =>
-              isActive ? "nav-link active" : "nav-link"
-            }
+            className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
             onClick={closeMenu}
           >
-            Exhibitions
+            {t("nav.exhibitions")}
           </NavLink>
           <NavLink
             to="/visit"
-            className={({ isActive }) =>
-              isActive ? "nav-link active" : "nav-link"
-            }
+            className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
             onClick={closeMenu}
           >
-            Visit
+            {t("nav.visit")}
           </NavLink>
+
+          <NavLink to="/foro" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} onClick={closeMenu}>
+            {t("nav.foro")}
+          </NavLink>
+          <LocaleSwitcher />
         </nav>
       </div>
     </header>

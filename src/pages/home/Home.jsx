@@ -1,5 +1,7 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { useTranslation } from "react-i18next";
 import ExhibitionCard from "../../components/exhibition-card/ExhibitionCard";
+import Foro from "../../components/foro/Foro";
 import exhibitions from "../../data/exhibitions";
 import "leaflet/dist/leaflet.css";
 import "./Home.css";
@@ -10,27 +12,23 @@ const MUSEUM_COORDINATES = {
 };
 
 function Home() {
+  const { t } = useTranslation();
+
   return (
     <div className="home-wrapper">
       
       <section className="hero-section">
         <div className="hero-content">
-          <h1 className="hero-title">Welcome to Marcy Museum</h1>
-          <p className="hero-subtitle">
-            Where contemporary art meets innovation and creativity knows no bounds.
-          </p>
-          <p className="hero-description">
-            Discover our curated collection of exhibitions featuring artists from around the world.
-          </p>
+          <h1 className="hero-title">{t("hero.title")}</h1>
+          <p className="hero-subtitle">{t("hero.subtitle")}</p>
+          <p className="hero-description">{t("hero.description")}</p>
         </div>
       </section>
 
       <section className="featured-section">
         <div className="section-header">
-          <h2 className="section-title">Current Exhibitions</h2>
-          <p className="section-description">
-            Explore our carefully selected exhibitions showcasing diverse artistic voices and perspectives.
-          </p>
+          <h2 className="section-title">{t("exhibitions.currentExhibitions")}</h2>
+          <p className="section-description">{t("exhibitions.currentDesc")}</p>
         </div>
         
         <div className="exhibitions-grid">
@@ -46,12 +44,18 @@ function Home() {
         </div>
       </section>
 
+      <section className="foro-section">
+        <div className="section-header">
+          <h2 className="section-title">{t("foro.title")}</h2>
+          <p className="section-description">{t("foro.description")}</p>
+        </div>
+        <Foro />
+      </section>
+
       <section className="map-section">
         <div className="section-header">
-          <h2 className="section-title">Find Us</h2>
-          <p className="section-description">
-            Visit us at our location in Las Palmas de Gran Canaria
-          </p>
+          <h2 className="section-title">{t("visit.findUs")}</h2>
+          <p className="section-description">{t("visit.findUsDesc")}</p>
         </div>
         
         <div className="map-container">
@@ -79,17 +83,17 @@ function Home() {
         
         <div className="map-info">
           <div className="info-card">
-            <h3>Address</h3>
+            <h3>{t("visit.address")}</h3>
             <p>Avenida de Canarias s/n</p>
             <p>Las Palmas de Gran Canaria, 35100</p>
           </div>
           <div className="info-card">
-            <h3>Hours</h3>
-            <p>Tuesday - Sunday</p>
+            <h3>{t("visit.hours")}</h3>
+            <p>{t("visit.hoursDetail")}</p>
             <p>10:00 AM - 7:00 PM</p>
           </div>
           <div className="info-card">
-            <h3>Contact</h3>
+            <h3>{t("visit.contact")}</h3>
             <p>Tel: +34 691 333 444</p>
             <p>info@marcymuseum.com</p>
           </div>
