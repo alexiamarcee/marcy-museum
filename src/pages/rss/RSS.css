@@ -1,0 +1,140 @@
+.rss-page {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 1em;
+}
+
+.rss-header {
+  text-align: center;
+  margin-bottom: 2.5em;
+  padding: 2em;
+  background: linear-gradient(135deg, #f9f0ee, #fff);
+  border-radius: 12px;
+  border-left: 4px solid #b37c6b;
+}
+
+.rss-header h1 {
+  font-size: 2rem;
+  color: #b37c6b;
+  margin-bottom: 0.5em;
+}
+
+.rss-header p {
+  color: #666;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.rss-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+.rss-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5em;
+  padding: 1.8em;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.07);
+  border: 1px solid #f0e0db;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rss-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(179, 124, 107, 0.15);
+}
+
+.rss-icon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f0ee;
+  border-radius: 50%;
+}
+
+.rss-info {
+  flex: 1;
+}
+
+.rss-info h3 {
+  color: #333;
+  font-size: 1.15rem;
+  margin-bottom: 0.4em;
+}
+
+.rss-info p {
+  color: #777;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1em;
+  border-left: 3px solid #f0e0db;
+  padding-left: 0.8em;
+}
+
+.rss-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.5em 1.2em;
+  background-color: #b37c6b;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.rss-link:hover {
+  background-color: #c4a69f;
+  transform: translateY(-1px);
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .rss-page {
+    max-width: 90%;
+  }
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+  .rss-page {
+    margin: 1em;
+    padding: 0.5em;
+  }
+
+  .rss-header {
+    padding: 1.2em;
+  }
+
+  .rss-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .rss-card {
+    flex-direction: column;
+    gap: 0.8em;
+    padding: 1.2em;
+  }
+
+  .rss-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .rss-info p {
+    font-size: 0.9rem;
+  }
+}

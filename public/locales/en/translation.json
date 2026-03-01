@@ -4,7 +4,8 @@
     "exhibitions": "Exhibitions",
     "visit": "Visit",
     "contact": "Contact",
-    "foro": "Forum"
+    "foro": "Forum",
+    "rss": "RSS"
   },
   "footer": {
     "description": "A contemporary art museum dedicated to creative expression and cultural innovation, showcasing diverse artistic voices from around the world.",
@@ -153,5 +154,18 @@
     "h6": "6. Changes to Terms",
     "p6": "We reserve the right to update these Terms & Conditions at any time. Continued use of the website implies acceptance of any changes.",
     "contact": "If you have any questions, please contact us at info@marcymuseum.com."
+  },
+  "rss": {
+    "title": "News",
+    "subtitle": "Stay updated with the latest news from the contemporary art world. Subscribe to our recommended feeds.",
+    "link": "Visit",
+    "feed1": {
+      "name": "Art News",
+      "description": "Latest news from the art world"
+    },
+    "feed2": {
+      "name": "Art Foundation News",
+      "description": "Art market news, exhibitions and artists"
+    }
   }
 }

@@ -63,6 +63,13 @@ function Header() {
           >
             {t("nav.foro")}
           </NavLink>
+          <NavLink
+            to="/rss"
+            className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+            onClick={closeMenu}
+          >
+            News
+          </NavLink>
           <LocaleSwitcher />
         </nav>
       </div>

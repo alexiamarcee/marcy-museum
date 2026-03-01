@@ -9,6 +9,7 @@ import CookiesPolicy from "./pages/policy/CookiesPolicy";
 import Terms from "./pages/policy/Terms";
 import Contact from "./pages/policy/Contact";
 import Foro from "./components/foro/Foro";
+import RSS from "./pages/rss/RSS";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/cookies" element={<CookiesPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/rss" element={<RSS />} />
         </Routes>
       </main>
 
