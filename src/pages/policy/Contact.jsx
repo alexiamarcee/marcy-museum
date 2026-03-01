@@ -1,13 +1,14 @@
+import { useTranslation } from "react-i18next";
+import "./Policy.css";
+
 function Contact() {
-    return (
-        <div className="legal-page">
-            <h1>Contact</h1>
-            <p>
-                If you have any questions, please contact us at
-                info@marcymuseum.com
-            </p>
-        </div>
-    );
+  const { t } = useTranslation();
+  return (
+    <div className="legal-page">
+      <h1>{t("contact.title")}</h1>
+      <p>{t("contact.description")}</p>
+    </div>
+  );
 }
 
 export default Contact;

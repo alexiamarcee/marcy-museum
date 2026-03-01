@@ -3,7 +3,8 @@
     "home": "Home",
     "exhibitions": "Exhibitions",
     "visit": "Visit",
-    "contact": "Contact"
+    "contact": "Contact",
+    "foro": "Forum"
   },
   "footer": {
     "description": "A contemporary art museum dedicated to creative expression and cultural innovation, showcasing diverse artistic voices from around the world.",
@@ -15,6 +16,11 @@
     "cookies": "Cookies Policy",
     "terms": "Terms & Conditions"
   },
+  "hero": {
+    "title": "Welcome to Marcy Museum",
+    "subtitle": "Where contemporary art meets innovation and creativity knows no bounds.",
+    "description": "Discover our curated collection of exhibitions featuring artists from around the world."
+  },
   "exhibitions": {
     "title": "Our Exhibitions",
     "description": "Discover our diverse collection of contemporary artworks from talented artists around the world. Each exhibition offers a unique perspective and invites you to explore new dimensions of creativity.",
@@ -24,9 +30,18 @@
     "currentExhibitions": "Current Exhibitions",
     "currentDesc": "Explore our carefully selected exhibitions showcasing diverse artistic voices and perspectives.",
     "artworks": {
-      "1": { "title": "Silly Cat", "description": "Silliest of them all" },
-      "2": { "title": "Duck with a hat", "description": "All hat and no cattle" },
-      "3": { "title": "Hungry dog", "description": "Fattie dog spotted" }
+      "1": {
+        "title": "Silly Cat",
+        "description": "Silliest of them all"
+      },
+      "2": {
+        "title": "Duck with a hat",
+        "description": "All hat and no cattle"
+      },
+      "3": {
+        "title": "Hungry dog",
+        "description": "Fattie dog spotted"
+      }
     }
   },
   "visit": {
@@ -37,12 +52,106 @@
     "findUs": "Find Us",
     "findUsDesc": "Visit us at our location in Las Palmas de Gran Canaria"
   },
-  "hero": {
-    "title": "Welcome to Marcy Museum",
-    "subtitle": "Where contemporary art meets innovation and creativity knows no bounds.",
-    "description": "Discover our curated collection of exhibitions featuring artists from around the world."
+  "visitPage": {
+    "title": "Visit Us",
+    "description": "Plan your visit to Marcy Museum and discover our world-class exhibitions",
+    "infoTitle": "Museum Information",
+    "mapTitle": "Find Us on the Map",
+    "openingHours": {
+      "title": "Opening Hours",
+      "tueFri": "Tuesday - Friday:",
+      "satSun": "Saturday - Sunday:",
+      "monday": "Monday:",
+      "closed": "Closed"
+    },
+    "contact": {
+      "phone": "Phone:",
+      "email": "Email:",
+      "fax": "Fax:"
+    },
+    "admission": {
+      "title": "Admission",
+      "adults": "Adults:",
+      "students": "Students & Seniors:",
+      "children": "Children (under 12):",
+      "free": "Free"
+    },
+    "accessibility": {
+      "title": "Accessibility",
+      "wheelchair": "Wheelchair accessible",
+      "elevator": "Elevator available",
+      "restrooms": "Accessible restrooms"
+    },
+    "parking": {
+      "title": "Parking",
+      "free": "Free parking available",
+      "spaces": "200 spaces",
+      "ev": "EV charging stations"
+    },
+    "form": {
+      "title": "Get in Touch",
+      "subtitle": "Have questions or need more information? Send us a message!",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "John Doe",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "message": "Your Message",
+      "messagePlaceholder": "Tell us how we can help you...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "successMessage": "Thank you! Your message has been sent successfully."
+    }
   },
-  "foro": { 
-    "title": "Community Forum", 
-    "description": "Share your thoughts about our exhibitions." }
+  "foro": {
+    "title": "Museum Forum",
+    "description": "Share your thoughts about our exhibitions.",
+    "namePlaceholder": "Your name",
+    "messagePlaceholder": "Your message",
+    "send": "Send",
+    "delete": "Delete"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "If you have any questions, please contact us at info@marcymuseum.com"
+  },
+  "cookies": {
+    "title": "Cookies Policy",
+    "intro": "This website uses cookies to improve user experience and ensure the proper functioning of our services.",
+    "h1": "1. What Are Cookies?",
+    "p1": "Cookies are small text files stored on your device when you visit a website. They help improve functionality and analyze site usage.",
+    "h2": "2. Types of Cookies We Use",
+    "p2": "• Essential Cookies: Required for basic website functionality.\n• Analytics Cookies: Help us understand how visitors interact with the site.\n• Preference Cookies: Remember your settings and preferences.",
+    "h3": "3. Managing Cookies",
+    "p3": "You can manage or disable cookies through your browser settings. Please note that disabling certain cookies may affect website functionality.",
+    "h4": "4. Third-Party Cookies",
+    "p4": "Some cookies may be set by third-party services such as analytics providers. We do not control these cookies.",
+    "h5": "5. Policy Updates",
+    "p5": "This Cookies Policy may be updated periodically. Continued use of the website constitutes acceptance of changes.",
+    "contact": "For more information, contact us at info@marcymuseum.com."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "At Marcy National Museum, we respect your privacy and are committed to protecting your personal data.",
+    "h1": "Information We Collect",
+    "p1": "We may collect your name and email address when you contact us or subscribe to our newsletter.",
+    "h2": "How We Use Your Data",
+    "p2": "Your information is used solely to respond to inquiries and improve our services."
+  },
+  "terms": {
+    "title": "Terms & Conditions",
+    "intro": "Welcome to Marcy National Museum. By accessing and using this website, you agree to comply with the following Terms and Conditions.",
+    "h1": "1. Website Use",
+    "p1": "This website is intended to provide information about exhibitions, events, and services offered by Marcy National Museum. Users agree to use this website lawfully and respectfully.",
+    "h2": "2. Intellectual Property",
+    "p2": "All content on this website, including images, text, logos, and designs, is the property of Marcy National Museum unless otherwise stated. Reproduction or distribution without written permission is prohibited.",
+    "h3": "3. Tickets & Visits",
+    "p3": "Ticket purchases and reservations are subject to availability. The museum reserves the right to modify opening hours, exhibitions, or events without prior notice.",
+    "h4": "4. External Links",
+    "p4": "This website may include links to third-party websites. Marcy National Museum is not responsible for the content or privacy practices of external sites.",
+    "h5": "5. Limitation of Liability",
+    "p5": "While we strive to ensure the accuracy of the information provided, the museum does not guarantee that all content is free of errors. We are not liable for any damages arising from the use of this website.",
+    "h6": "6. Changes to Terms",
+    "p6": "We reserve the right to update these Terms & Conditions at any time. Continued use of the website implies acceptance of any changes.",
+    "contact": "If you have any questions, please contact us at info@marcymuseum.com."
+  }
 }

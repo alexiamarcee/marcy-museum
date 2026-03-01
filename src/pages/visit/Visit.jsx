@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./Visit.css";
@@ -9,6 +10,7 @@ const MUSEUM_LOCATION = {
 };
 
 function Visit() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -21,52 +23,38 @@ function Visit() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitMessage("");
-
-    // Simulate form submission
     setTimeout(() => {
-      setSubmitMessage("Thank you! Your message has been sent successfully.");
+      setSubmitMessage(t("visitPage.form.successMessage"));
       setIsSubmitting(false);
-      setFormData({
-        fullName: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
+      setFormData({ fullName: "", email: "", phone: "", message: "" });
     }, 1500);
   };
 
   return (
     <div className="visit-page">
-      
-      {/* Page Header */}
+
       <section className="visit-header">
         <div className="header-content">
-          <h1 className="page-title">Visit Us</h1>
-          <p className="page-description">
-            Plan your visit to Marcy Museum and discover our world-class exhibitions
-          </p>
+          <h1 className="page-title">{t("visitPage.title")}</h1>
+          <p className="page-description">{t("visitPage.description")}</p>
         </div>
       </section>
 
-      {/* Museum Information */}
       <section className="visit-info-section">
         <div className="visit-container">
-          <h2 className="section-title">Museum Information</h2>
-          
+          <h2 className="section-title">{t("visitPage.infoTitle")}</h2>
           <div className="info-grid">
+
             <div className="info-card">
               <div className="info-icon">📍</div>
-              <h3>Address</h3>
+              <h3>{t("visit.address")}</h3>
               <p>Avenida de Canarias s/n</p>
               <p>Las Palmas de Gran Canaria</p>
               <p>35100, Spain</p>
@@ -74,51 +62,51 @@ function Visit() {
 
             <div className="info-card">
               <div className="info-icon">🕐</div>
-              <h3>Opening Hours</h3>
-              <p><strong>Tuesday - Friday:</strong> 10:00 AM - 7:00 PM</p>
-              <p><strong>Saturday - Sunday:</strong> 10:00 AM - 8:00 PM</p>
-              <p><strong>Monday:</strong> Closed</p>
+              <h3>{t("visitPage.openingHours.title")}</h3>
+              <p><strong>{t("visitPage.openingHours.tueFri")}</strong> 10:00 AM - 7:00 PM</p>
+              <p><strong>{t("visitPage.openingHours.satSun")}</strong> 10:00 AM - 8:00 PM</p>
+              <p><strong>{t("visitPage.openingHours.monday")}</strong> {t("visitPage.openingHours.closed")}</p>
             </div>
 
             <div className="info-card">
               <div className="info-icon">📞</div>
-              <h3>Contact</h3>
-              <p><strong>Phone:</strong> +34 691 333 444</p>
-              <p><strong>Email:</strong> info@marcymuseum.com</p>
-              <p><strong>Fax:</strong> +34 691 333 445</p>
+              <h3>{t("visit.contact")}</h3>
+              <p><strong>{t("visitPage.contact.phone")}</strong> +34 691 333 444</p>
+              <p><strong>{t("visitPage.contact.email")}</strong> info@marcymuseum.com</p>
+              <p><strong>{t("visitPage.contact.fax")}</strong> +34 691 333 445</p>
             </div>
 
             <div className="info-card">
               <div className="info-icon">💳</div>
-              <h3>Admission</h3>
-              <p><strong>Adults:</strong> €12</p>
-              <p><strong>Students & Seniors:</strong> €8</p>
-              <p><strong>Children (under 12):</strong> Free</p>
+              <h3>{t("visitPage.admission.title")}</h3>
+              <p><strong>{t("visitPage.admission.adults")}</strong> €12</p>
+              <p><strong>{t("visitPage.admission.students")}</strong> €8</p>
+              <p><strong>{t("visitPage.admission.children")}</strong> {t("visitPage.admission.free")}</p>
             </div>
 
             <div className="info-card">
               <div className="info-icon">♿</div>
-              <h3>Accessibility</h3>
-              <p>Wheelchair accessible</p>
-              <p>Elevator available</p>
-              <p>Accessible restrooms</p>
+              <h3>{t("visitPage.accessibility.title")}</h3>
+              <p>{t("visitPage.accessibility.wheelchair")}</p>
+              <p>{t("visitPage.accessibility.elevator")}</p>
+              <p>{t("visitPage.accessibility.restrooms")}</p>
             </div>
 
             <div className="info-card">
               <div className="info-icon">🚗</div>
-              <h3>Parking</h3>
-              <p>Free parking available</p>
-              <p>200 spaces</p>
-              <p>EV charging stations</p>
+              <h3>{t("visitPage.parking.title")}</h3>
+              <p>{t("visitPage.parking.free")}</p>
+              <p>{t("visitPage.parking.spaces")}</p>
+              <p>{t("visitPage.parking.ev")}</p>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* Map Section */}
       <section className="map-section">
         <div className="visit-container">
-          <h2 className="section-title">Find Us on the Map</h2>
+          <h2 className="section-title">{t("visitPage.mapTitle")}</h2>
           <div className="map-wrapper">
             <MapContainer
               center={[MUSEUM_LOCATION.lat, MUSEUM_LOCATION.lng]}
@@ -144,17 +132,14 @@ function Visit() {
         </div>
       </section>
 
-      {/* Contact Form */}
       <section className="contact-section">
         <div className="contact-container">
-          <h2 className="section-title">Get in Touch</h2>
-          <p className="section-subtitle">
-            Have questions or need more information? Send us a message!
-          </p>
+          <h2 className="section-title">{t("visitPage.form.title")}</h2>
+          <p className="section-subtitle">{t("visitPage.form.subtitle")}</p>
 
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="fullName">Full Name *</label>
+              <label htmlFor="fullName">{t("visitPage.form.fullName")} *</label>
               <input
                 type="text"
                 id="fullName"
@@ -162,12 +147,12 @@ function Visit() {
                 value={formData.fullName}
                 onChange={handleInputChange}
                 required
-                placeholder="John Doe"
+                placeholder={t("visitPage.form.fullNamePlaceholder")}
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="email">Email Address *</label>
+              <label htmlFor="email">{t("visitPage.form.email")} *</label>
               <input
                 type="email"
                 id="email"
@@ -180,7 +165,7 @@ function Visit() {
             </div>
 
             <div className="form-group">
-              <label htmlFor="phone">Phone Number</label>
+              <label htmlFor="phone">{t("visitPage.form.phone")}</label>
               <input
                 type="tel"
                 id="phone"
@@ -192,7 +177,7 @@ function Visit() {
             </div>
 
             <div className="form-group">
-              <label htmlFor="message">Your Message *</label>
+              <label htmlFor="message">{t("visitPage.form.message")} *</label>
               <textarea
                 id="message"
                 name="message"
@@ -200,22 +185,16 @@ function Visit() {
                 onChange={handleInputChange}
                 required
                 rows="6"
-                placeholder="Tell us how we can help you..."
+                placeholder={t("visitPage.form.messagePlaceholder")}
               ></textarea>
             </div>
 
-            <button
-              type="submit"
-              className="submit-button"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? "Sending..." : "Send Message"}
+            <button type="submit" className="submit-button" disabled={isSubmitting}>
+              {isSubmitting ? t("visitPage.form.sending") : t("visitPage.form.send")}
             </button>
 
             {submitMessage && (
-              <div className="submit-message success">
-                {submitMessage}
-              </div>
+              <div className="submit-message success">{submitMessage}</div>
             )}
           </form>
         </div>

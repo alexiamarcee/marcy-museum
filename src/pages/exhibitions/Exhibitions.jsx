@@ -9,7 +9,6 @@ function Exhibitions() {
   return (
     <div className="exhibitions-page">
       
-      {/* Page Header */}
       <section className="exhibitions-header">
         <div className="header-content">
           <h1 className="page-title">{t("exhibitions.title")}</h1>
@@ -19,16 +18,15 @@ function Exhibitions() {
         </div>
       </section>
 
-      {/* Exhibitions Grid */}
       <section className="exhibitions-content">
         <div className="exhibitions-container">
           <div className="exhibitions-grid">
             {exhibitions.map((exhibition) => (
               <ExhibitionCard
                 key={exhibition.id}
-                title={exhibition.title}
+                titleKey={exhibition.titleKey}
                 artist={exhibition.artist}
-                description={exhibition.description}
+                descriptionKey={exhibition.descriptionKey}
                 image={exhibition.image}
               />
             ))}
@@ -36,7 +34,6 @@ function Exhibitions() {
         </div>
       </section>
 
-      {/* Call to Action */}
       <section className="exhibitions-cta">
         <div className="cta-content">
           <h2>{t("exhibitions.planVisit")}</h2>

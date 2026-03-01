@@ -1,7 +1,6 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { useTranslation } from "react-i18next";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import ExhibitionCard from "../../components/exhibition-card/ExhibitionCard";
-import Foro from "../../components/foro/Foro";
 import exhibitions from "../../data/exhibitions";
 import "leaflet/dist/leaflet.css";
 import "./Home.css";
@@ -35,21 +34,13 @@ function Home() {
           {exhibitions.map((exhibition) => (
             <ExhibitionCard
               key={exhibition.id}
-              title={exhibition.title}
+              titleKey={exhibition.titleKey}
               artist={exhibition.artist}
-              description={exhibition.description}
+              descriptionKey={exhibition.descriptionKey}
               image={exhibition.image}
             />
           ))}
         </div>
-      </section>
-
-      <section className="foro-section">
-        <div className="section-header">
-          <h2 className="section-title">{t("foro.title")}</h2>
-          <p className="section-description">{t("foro.description")}</p>
-        </div>
-        <Foro />
       </section>
 
       <section className="map-section">

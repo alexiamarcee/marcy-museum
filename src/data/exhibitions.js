@@ -5,23 +5,23 @@ import dog from "../assets/photos/dog.jpg";
 const exhibitions = [
   {
     id: 1,
-    title: "Silly Cat",
+    titleKey: "exhibitions.artworks.1.title",
     artist: "Karen",
-    description: "Silliest of them all",
+    descriptionKey: "exhibitions.artworks.1.description",
     image: silly
   },
   {
     id: 2,
-    title: "Duck with a hat",
+    titleKey: "exhibitions.artworks.2.title",
     artist: "Daniel",
-    description: "All hat and no cattle",
+    descriptionKey: "exhibitions.artworks.2.description",
     image: duck
   },
   {
     id: 3,
-    title: "Hungry dog",
+    titleKey: "exhibitions.artworks.3.title",
     artist: "Alex",
-    description: "Fattie dof spotted",
+    descriptionKey: "exhibitions.artworks.3.description",
     image: dog
   }
 ];

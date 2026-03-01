@@ -3,7 +3,8 @@
     "home": "Inicio",
     "exhibitions": "Exposiciones",
     "visit": "Visitar",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "foro": "Foro"
   },
   "footer": {
     "description": "Un museo de arte contemporáneo dedicado a la expresión creativa y la innovación cultural, con voces artísticas diversas de todo el mundo.",
@@ -15,6 +16,11 @@
     "cookies": "Política de Cookies",
     "terms": "Términos y Condiciones"
   },
+  "hero": {
+    "title": "Bienvenido al Museo Marcy",
+    "subtitle": "Donde el arte contemporáneo se encuentra con la innovación y la creatividad no tiene límites.",
+    "description": "Descubre nuestra colección de exposiciones con artistas de todo el mundo."
+  },
   "exhibitions": {
     "title": "Nuestras Exposiciones",
     "description": "Descubre nuestra diversa colección de obras de arte contemporáneo de artistas talentosos de todo el mundo. Cada exposición ofrece una perspectiva única.",
@@ -24,9 +30,18 @@
     "currentExhibitions": "Exposiciones Actuales",
     "currentDesc": "Explora nuestras exposiciones seleccionadas con diversas voces y perspectivas artísticas.",
     "artworks": {
-      "1": { "title": "Gato tonto", "description": "El más tonto de todos" },
-      "2": { "title": "Pato con sombrero", "description": "Todo sombrero y nada más" },
-      "3": { "title": "Perro hambriento", "description": "Perro gordito avistado" }
+      "1": {
+        "title": "Gato tonto",
+        "description": "El más tonto de todos"
+      },
+      "2": {
+        "title": "Pato con sombrero",
+        "description": "Todo sombrero y nada más"
+      },
+      "3": {
+        "title": "Perro hambriento",
+        "description": "Perro gordito avistado"
+      }
     }
   },
   "visit": {
@@ -34,15 +49,109 @@
     "hours": "Horario",
     "hoursDetail": "Martes - Domingo",
     "contact": "Contacto",
-    "findUs": "Encuéntranos", 
+    "findUs": "Encuéntranos",
     "findUsDesc": "Visítanos en Las Palmas de Gran Canaria"
   },
-  "hero": {
-    "title": "Bienvenido al Museo Marcy",
-    "subtitle": "Donde el arte contemporáneo se encuentra con la innovación y la creatividad no tiene límites.",
-    "description": "Descubre nuestra colección de exposiciones con artistas de todo el mundo."
+  "visitPage": {
+    "title": "Visítanos",
+    "description": "Planifica tu visita al Museo Marcy y descubre nuestras exposiciones de clase mundial",
+    "infoTitle": "Información del Museo",
+    "mapTitle": "Encuéntranos en el Mapa",
+    "openingHours": {
+      "title": "Horario de Apertura",
+      "tueFri": "Martes - Viernes:",
+      "satSun": "Sábado - Domingo:",
+      "monday": "Lunes:",
+      "closed": "Cerrado"
+    },
+    "contact": {
+      "phone": "Teléfono:",
+      "email": "Email:",
+      "fax": "Fax:"
+    },
+    "admission": {
+      "title": "Entrada",
+      "adults": "Adultos:",
+      "students": "Estudiantes y Mayores:",
+      "children": "Niños (menores de 12):",
+      "free": "Gratis"
+    },
+    "accessibility": {
+      "title": "Accesibilidad",
+      "wheelchair": "Accesible en silla de ruedas",
+      "elevator": "Ascensor disponible",
+      "restrooms": "Baños accesibles"
+    },
+    "parking": {
+      "title": "Aparcamiento",
+      "free": "Aparcamiento gratuito disponible",
+      "spaces": "200 plazas",
+      "ev": "Estaciones de carga para vehículos eléctricos"
+    },
+    "form": {
+      "title": "Contáctanos",
+      "subtitle": "¿Tienes preguntas o necesitas más información? ¡Envíanos un mensaje!",
+      "fullName": "Nombre Completo",
+      "fullNamePlaceholder": "Juan García",
+      "email": "Correo Electrónico",
+      "phone": "Número de Teléfono",
+      "message": "Tu Mensaje",
+      "messagePlaceholder": "Cuéntanos cómo podemos ayudarte...",
+      "send": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "successMessage": "¡Gracias! Tu mensaje ha sido enviado correctamente."
+    }
   },
-  "foro": { 
-    "title": "Foro de la Comunidad", 
-    "description": "Comparte tu opinión sobre nuestras exposiciones." }
+  "foro": {
+    "title": "Foro del Museo",
+    "description": "Comparte tu opinión sobre nuestras exposiciones.",
+    "namePlaceholder": "Tu nombre",
+    "messagePlaceholder": "Tu mensaje",
+    "send": "Enviar",
+    "delete": "Eliminar"
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "Si tienes alguna pregunta, contáctanos en info@marcymuseum.com"
+  },
+  "cookies": {
+    "title": "Política de Cookies",
+    "intro": "Este sitio web utiliza cookies para mejorar la experiencia del usuario y garantizar el correcto funcionamiento de nuestros servicios.",
+    "h1": "1. ¿Qué son las Cookies?",
+    "p1": "Las cookies son pequeños archivos de texto almacenados en tu dispositivo cuando visitas un sitio web. Ayudan a mejorar la funcionalidad y analizar el uso del sitio.",
+    "h2": "2. Tipos de Cookies que Usamos",
+    "p2": "• Cookies Esenciales: Necesarias para el funcionamiento básico del sitio.\n• Cookies Analíticas: Nos ayudan a entender cómo los visitantes interactúan con el sitio.\n• Cookies de Preferencias: Recuerdan tu configuración y preferencias.",
+    "h3": "3. Gestión de Cookies",
+    "p3": "Puedes gestionar o deshabilitar las cookies a través de la configuración de tu navegador. Ten en cuenta que deshabilitar ciertas cookies puede afectar la funcionalidad del sitio.",
+    "h4": "4. Cookies de Terceros",
+    "p4": "Algunas cookies pueden ser establecidas por servicios de terceros como proveedores de análisis. No controlamos estas cookies.",
+    "h5": "5. Actualizaciones de la Política",
+    "p5": "Esta Política de Cookies puede actualizarse periódicamente. El uso continuado del sitio web constituye la aceptación de los cambios.",
+    "contact": "Para más información, contáctanos en info@marcymuseum.com."
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "intro": "En el Museo Nacional Marcy, respetamos tu privacidad y nos comprometemos a proteger tus datos personales.",
+    "h1": "Información que Recopilamos",
+    "p1": "Podemos recopilar tu nombre y correo electrónico cuando nos contactas o te suscribes a nuestro boletín.",
+    "h2": "Cómo Usamos tus Datos",
+    "p2": "Tu información se utiliza únicamente para responder consultas y mejorar nuestros servicios."
+  },
+  "terms": {
+    "title": "Términos y Condiciones",
+    "intro": "Bienvenido al Museo Nacional Marcy. Al acceder y usar este sitio web, aceptas cumplir con los siguientes Términos y Condiciones.",
+    "h1": "1. Uso del Sitio Web",
+    "p1": "Este sitio web está destinado a proporcionar información sobre exposiciones, eventos y servicios ofrecidos por el Museo Nacional Marcy.",
+    "h2": "2. Propiedad Intelectual",
+    "p2": "Todo el contenido de este sitio web, incluidas imágenes, textos, logotipos y diseños, es propiedad del Museo Nacional Marcy. La reproducción sin permiso escrito está prohibida.",
+    "h3": "3. Entradas y Visitas",
+    "p3": "La compra de entradas y reservas está sujeta a disponibilidad. El museo se reserva el derecho de modificar horarios, exposiciones o eventos sin previo aviso.",
+    "h4": "4. Enlaces Externos",
+    "p4": "Este sitio web puede incluir enlaces a sitios web de terceros. El Museo Nacional Marcy no es responsable del contenido o prácticas de privacidad de sitios externos.",
+    "h5": "5. Limitación de Responsabilidad",
+    "p5": "Si bien nos esforzamos por garantizar la precisión de la información, el museo no garantiza que todo el contenido esté libre de errores.",
+    "h6": "6. Cambios en los Términos",
+    "p6": "Nos reservamos el derecho de actualizar estos Términos y Condiciones en cualquier momento. El uso continuado implica la aceptación de los cambios.",
+    "contact": "Si tienes alguna pregunta, contáctanos en info@marcymuseum.com."
+  }
 }

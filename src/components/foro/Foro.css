@@ -34,6 +34,27 @@
   border: 1px solid blue;
   background-color: lightblue;
   border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.foro-message-content {
+  flex: 1;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4em 0.8em;
+  cursor: pointer;
+  margin-left: 1em;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
 }
 
 /* Extra small devices (phones, 600px and down) */
