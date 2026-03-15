@@ -55,7 +55,6 @@ function Foro() {
     setEditingId(msg.id);
     setEditTexts((prev) => ({ ...prev, [msg.id]: msg.message }));
   };
-
   // Guardar edición
   const updateMessage = (id) => {
     update(ref(db, `messages/${id}`), { message: editTexts[id] });
