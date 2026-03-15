@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Noticias Marcy Museum</title>
+    <link>https://marcy-museum.web.app</link>
+    <description>Últimas noticias y novedades del Marcy Museum</description>
+    <language>es-es</language>
+    <lastBuildDate>Sun, 15 Mar 2026 12:00:00 +0000</lastBuildDate>
+
+    <item>
+      <title>Nueva exposición: Impresionismo en el siglo XXI</title>
+      <link>https://marcy-museum.web.app/noticia1</link>
+      <description>El Marcy Museum inaugura una exposición dedicada a artistas contemporáneos que reinterpretan el movimiento impresionista con técnicas modernas.</description>
+      <pubDate>Sun, 15 Mar 2026 09:00:00 +0000</pubDate>
+      <guid>https://marcy-museum.web.app/noticia1</guid>
+    </item>
+
+    <item>
+      <title>Adquisición de una obra de Remedios Varo</title>
+      <link>https://marcy-museum.web.app/noticia2</link>
+      <description>El museo ha incorporado a su colección permanente una pintura surrealista inédita de Remedios Varo, cedida por una familia coleccionista privada.</description>
+      <pubDate>Sun, 15 Mar 2026 10:00:00 +0000</pubDate>
+      <guid>https://marcy-museum.web.app/noticia2</guid>
+    </item>
+
+    <item>
+      <title>Taller de acuarela para adultos</title>
+      <link>https://marcy-museum.web.app/noticia3</link>
+      <description>Este mes el museo ofrece talleres de acuarela inspirados en los paisajes de Turner. Las plazas son limitadas, inscripción disponible en recepción.</description>
+      <pubDate>Sun, 15 Mar 2026 11:00:00 +0000</pubDate>
+      <guid>https://marcy-museum.web.app/noticia3</guid>
+    </item>
+
+    <item>
+      <title>Restauración del fresco renacentista de la sala principal</title>
+      <link>https://marcy-museum.web.app/noticia4</link>
+      <description>Expertos en restauración han completado la recuperación de un fresco del siglo XVI que decoraba la sala central del museo, ahora visible al público.</description>
+      <pubDate>Sat, 14 Mar 2026 10:00:00 +0000</pubDate>
+      <guid>https://marcy-museum.web.app/noticia4</guid>
+    </item>
+
+    <item>
+      <title>Visita guiada nocturna: Arte y misterio</title>
+      <link>https://marcy-museum.web.app/noticia5</link>
+      <description>El próximo viernes el museo abre sus puertas de noche para una visita guiada temática sobre los secretos y simbolismos ocultos en las obras de su colección.</description>
+      <pubDate>Fri, 13 Mar 2026 18:00:00 +0000</pubDate>
+      <guid>https://marcy-museum.web.app/noticia5</guid>
+    </item>
+
+  </channel>
+</rss>

@@ -9,7 +9,7 @@
     <a href="https://github.com/alexiamarcee/marcy-museum"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/alexiamarcee/marcy-museum">View Demo</a>
+    <a href="https://marcy-museum.web.app">View Live Demo</a>
     ·
     <a href="https://github.com/alexiamarcee/marcy-museum/issues">Report Bug</a>
     ·
@@ -17,296 +17,315 @@
   </p>
 </div>
 
-📚 Table of Contents
+---
 
-About The Project
-Built With
-Getting Started
+## 🌐 Live Project
+**Firebase Hosting:** https://marcy-museum.web.app  
+**RSS Feed:** https://marcy-museum.web.app/rss.xml
 
-Prerequisites
-Installation
+---
 
+## 📰 RSS Feed Preview
+Below is a screenshot showing the RSS feed loaded in a feed reader, with each item linking to a news page in the app hosted on Firebase:
 
-Usage
-Roadmap
-Project Structure
-Internationalization
-Firebase Integration
-UX / UI & Clean Code
-Contributing
-License
-Contact
-Acknowledgments
+![RSS Feed Reader](src/assets/photos/rss-screenshot.png)
 
+---
 
-🏛 About The Project
+## 📚 Table of Contents
+
+- [About The Project](#about-the-project)
+- [Home Page](#home-page)
+- [Built With](#built-with)
+- [Third-Party Components](#third-party-components)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Roadmap](#roadmap)
+- [Project Structure](#project-structure)
+- [Naming Conventions](#naming-conventions)
+- [Internationalization](#internationalization)
+- [Firebase Integration](#firebase-integration)
+- [UX / UI & Clean Code](#ux--ui--clean-code)
+- [Design Inspiration](#design-inspiration)
+- [Helpful Tutorials](#helpful-tutorials)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgments](#acknowledgments)
+
+---
+
+## 🏛 About The Project
+
 Marcy Museum is a modern, responsive web application built with React that represents the official website of a contemporary art museum located in Las Palmas de Gran Canaria. The project demonstrates best practices in frontend development, including responsive design, clean code architecture, internationalization, and real-time database integration.
-🏠 Home Page
-The Home page is the main landing page of the application. It features:
 
-A hero section welcoming visitors with a title and description of the museum
-A Current Exhibitions section that dynamically renders exhibition cards from a JavaScript data array (exhibitions.js). Each card displays an image, title, artist name and description — all fully translated into English, Spanish and French
-An interactive map powered by Leaflet showing the exact museum location
-Info cards displaying the museum address, opening hours and contact details
+---
 
-Other pages
+## 🏠 Home Page
 
-Exhibitions — full grid of all artworks with translated titles and descriptions
-Visit — museum info, opening hours, admission prices, accessibility, parking, interactive map and contact form
-Forum — community forum with real-time Firebase integration (post and delete messages)
-Legal pages — Privacy Policy, Cookies Policy, Terms & Conditions and Contact, all translated into three languages
+The Home page is the main landing page of the application, accessible at both `/` and `/home`. It features:
 
-Why this project?
+- A **hero section** welcoming visitors with a title and description of the museum
+- A **Current Exhibitions** section that dynamically renders exhibition cards from a JavaScript data array (`exhibitions.js`). Each card displays an image, title, artist name and description — all fully translated into English, Spanish and French
+- An **interactive map** powered by Leaflet showing the exact museum location
+- **Info cards** displaying the museum address, opening hours and contact details
 
-To apply React fundamentals in a real-world scenario
-To practice reusable component architecture
-To follow clean code and naming conventions
-To implement responsive and user-friendly design
-To integrate real-time databases with Firebase
-To implement multi-language support with i18next
+### Other Pages
 
+- **Exhibitions** — full grid of all artworks with translated titles and descriptions
+- **Visit** — museum info, opening hours, admission prices, accessibility, parking, interactive map and contact form
+- **Forum** — community forum with real-time Firebase integration (read, create, edit and delete messages, with category filter)
+- **News** — RSS news feed with the latest museum updates
+- **Legal pages** — Privacy Policy, Cookies Policy, Terms & Conditions and Contact, all translated into three languages
 
-🚀 Built With
-Main technologies used in this project:
+---
 
-React
-Vite
-React Router DOM
-Leaflet
-React Leaflet
-Firebase Realtime Database
-i18next
-react-i18next
-i18next-http-backend
-React Icons
-CSS3 (Flexbox & Media Queries)
+## 🚀 Built With
 
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [React Router DOM](https://reactrouter.com/)
+- [Leaflet](https://leafletjs.com/)
+- [React Leaflet](https://react-leaflet.js.org/)
+- [Firebase Realtime Database](https://firebase.google.com/)
+- [i18next](https://www.i18next.com/)
+- [react-i18next](https://react.i18next.com/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- CSS3 (Flexbox & Media Queries)
 
-⚙ Getting Started
-To get a local copy up and running, follow these steps.
+---
 
-📌 Prerequisites
-You need:
+## 🧩 Third-Party Components
 
-Node.js installed
-npm (comes with Node)
+| Component | Description | Link |
+|-----------|-------------|------|
+| Leaflet | Interactive map showing museum location | https://leafletjs.com |
+| React Leaflet | React wrapper for Leaflet maps | https://react-leaflet.js.org |
+| Firebase Realtime Database | Real-time storage for forum messages | https://firebase.google.com |
+| i18next | Internationalization framework (EN, ES, FR) | https://www.i18next.com |
+| React Icons | Icon library used in footer and UI | https://react-icons.github.io/react-icons |
+| React Router DOM | Client-side routing between pages | https://reactrouter.com |
 
-Check your npm version:
-shnpm install npm@latest -g
+---
 
-💻 Installation
+## ⚙ Getting Started
 
-Clone the repository:
+### 📌 Prerequisites
 
-shgit clone https://github.com/alexiamarcee/marcy-museum.git
+- Node.js installed
+- npm (comes with Node)
+```sh
+npm install npm@latest -g
+```
 
-Navigate to the project folder:
+### 💻 Installation
 
-shcd marcy-museum
+1. Clone the repository:
+```sh
+git clone https://github.com/alexiamarcee/marcy-museum.git
+```
 
-Install dependencies:
+2. Navigate to the project folder:
+```sh
+cd marcy-museum
+```
 
-shnpm install
+3. Install dependencies:
+```sh
+npm install
+```
 
-Start development server:
+4. Start development server:
+```sh
+npm run dev
+```
 
-shnpm run dev
 The application will run at:
-http://localhost:5173
-http://localhost:5173/home
+- http://localhost:5173
+- http://localhost:5173/home
 
-🖥 Usage
+---
+
+## 🖥 Usage
+
 Marcy Museum allows users to:
 
-Explore featured exhibitions dynamically rendered from a data array
-Navigate between different sections using React Router
-Switch between English, Spanish and French using the language switcher in the header
-View museum location via interactive Leaflet map
-Post and delete messages in the community forum in real time via Firebase
-Access contact form and museum information
-Read legal pages: Privacy Policy, Cookies Policy, Terms & Conditions
+- Explore featured exhibitions dynamically rendered from a data array
+- Navigate between different sections using React Router
+- Switch between English, Spanish and French using the language switcher in the header
+- View museum location via interactive Leaflet map
+- Post, edit and delete messages in the community forum in real time via Firebase
+- Filter forum messages by category
+- Read the latest museum news via RSS feed
+- Access contact form and museum information
+- Read legal pages: Privacy Policy, Cookies Policy, Terms & Conditions
 
-This project demonstrates:
+---
 
-Component reusability
-Props usage
-Clean folder structure
-Responsive layout for mobile, tablet and desktop
-Third-party library integration
-Real-time database integration with Firebase
-Internationalization (i18n) with i18next
+## 🗺 Roadmap
 
+- [x] Dynamic exhibitions from a data array
+- [x] Interactive map with Leaflet
+- [x] Multi-language support (EN, ES, FR) with i18next
+- [x] Community Forum with Firebase Realtime Database (CRUD)
+- [x] Category filter in forum
+- [x] RSS News feed
+- [x] Responsive design for mobile, tablet and desktop
+- [x] Custom museum logo in sticky header
+- [x] Legal pages with consistent formatting
+- [x] Deployed to Firebase Hosting
 
-🗺 Roadmap
+---
 
- Dynamic exhibitions from a data array
- Interactive map with Leaflet
- Multi-language support (EN, ES, FR) with i18next
- Community Forum with Firebase Realtime Database
- Responsive design for mobile, tablet and desktop
- Custom museum logo in sticky header
- Legal pages with consistent formatting
- Add ticket booking functionality
- Add exhibition detail pages
- Improve animations and transitions
- Deploy project online
-
-See the repository issues for future improvements.
-
-📂 Project Structure
+## 📂 Project Structure
+```
 marcy-museum/
 ├── public/
+│   ├── rss.xml                # RSS feed file
 │   ├── vite.svg
 │   └── locales/               # i18n translation files
-│       ├── en/
-│       │   └── translation.json
-│       ├── es/
-│       │   └── translation.json
-│       └── fr/
-│           └── translation.json
+│       ├── en/translation.json
+│       ├── es/translation.json
+│       └── fr/translation.json
 ├── src/
-│   ├── assets/
-│   │   ├── react.svg
-│   │   └── photos/            # Images (logo, exhibitions)
-│   │       ├── logo.png
-│   │       ├── dog.jpg
-│   │       ├── duck.jpg
-│   │       └── silly.jpg
+│   ├── assets/photos/         # Images (logo, exhibitions)
 │   ├── components/
 │   │   ├── exhibition-card/
-│   │   │   ├── ExhibitionCard.jsx
-│   │   │   └── ExhibitionCard.css
 │   │   ├── footer/
-│   │   │   ├── Footer.jsx
-│   │   │   └── Footer.css
-│   │   ├── foro/              # Community Forum with Firebase
-│   │   │   ├── Firebase-crud.js
-│   │   │   ├── Firebase-setup.js
-│   │   │   ├── Foro.jsx
-│   │   │   └── Foro.css
+│   │   ├── foro/              # Forum with Firebase CRUD
 │   │   ├── header/
-│   │   │   ├── Header.jsx
-│   │   │   └── Header.css
-│   │   └── sample-form/
+│   │   └── message-card/
 │   ├── data/
-│   │   └── exhibitions.js     # Exhibitions data array
-│   ├── i18n/                  # Internationalization
-│   │   ├── config.ts
-│   │   └── LocaleSwitcher.jsx
+│   │   └── exhibitions.js
+│   ├── i18n/
 │   ├── pages/
 │   │   ├── exhibitions/
-│   │   │   ├── Exhibitions.jsx
-│   │   │   └── Exhibitions.css
 │   │   ├── home/
-│   │   │   ├── Home.jsx
-│   │   │   └── Home.css
 │   │   ├── locations/
-│   │   │   ├── Locations.jsx
-│   │   │   └── Locations.css
 │   │   ├── policy/
-│   │   │   ├── Contact.jsx
-│   │   │   ├── CookiesPolicy.jsx
-│   │   │   ├── Policy.css
-│   │   │   ├── PrivacyPolicy.jsx
-│   │   │   └── Terms.jsx
+│   │   ├── rss/               # News RSS page
 │   │   └── visit/
-│   │       ├── Visit.jsx
-│   │       └── Visit.css
 │   ├── services/
-│   │   └── Positions.js
 │   ├── App.jsx
-│   ├── App.css
-│   ├── main.jsx
-│   └── index.css
-├── .gitattributes
-├── .gitignore
-├── eslint.config.js
-├── index.html
-├── package-lock.json
-├── package.json
-├── README.md
+│   └── main.jsx
+├── firebase.json
+├── .firebaserc
 └── vite.config.js
+```
 
-Naming Conventions Used
+---
 
-Folders: kebab-case
-Components: PascalCase
-CSS files: PascalCase
-CSS classes: kebab-case
-Variables: camelCase
-Boolean variables: is / has / should prefix
-Routes: kebab-case
+## 📐 Naming Conventions
 
+| Element | Convention | Example |
+|---------|------------|---------|
+| Folders | kebab-case | `exhibition-card` |
+| Components | PascalCase | `ExhibitionCard.jsx` |
+| CSS files | PascalCase | `ExhibitionCard.css` |
+| CSS classes | kebab-case | `.message-card` |
+| Variables | camelCase | `filteredMessages` |
+| Boolean variables | is/has/should prefix | `isEditing`, `hasError` |
+| JS utility files | kebab-case | `firebase-setup.js` |
+| Routes | kebab-case | `/privacy-policy` |
 
-🌍 Internationalization
+---
+
+## 🌍 Internationalization
+
 The project supports three languages using i18next and react-i18next:
-LanguageCode🇬🇧 Englishen🇪🇸 Spanishes🇫🇷 Frenchfr
-Translation files are located in public/locales/. The LocaleSwitcher component in the header allows users to switch language at any time. All content — navigation, exhibition cards, forum, legal pages and forms — is fully translated.
 
-🔥 Firebase Integration
-The community forum uses Firebase Realtime Database:
+| Language | Code |
+|----------|------|
+| 🇬🇧 English | en |
+| 🇪🇸 Spanish | es |
+| 🇫🇷 French | fr |
 
-Messages load in real time on page load
-Users can post new messages with their name and content
-Users can delete any message in real time
-Messages are displayed in reverse chronological order
+Translation files are located in `public/locales/`. The `LocaleSwitcher` component in the header allows users to switch language at any time.
 
-Configuration is in src/components/foro/Firebase-setup.js.
+---
 
-🎨 UX / UI & Clean Code
-User Experience
+## 🔥 Firebase Integration
 
-Sticky header with custom logo visible on all pages
-Hamburger menu for smooth mobile navigation
-Language switcher always accessible in the header
-Consistent color palette and typography across all pages
-Responsive design for mobile, tablet and desktop
-Legal pages formatted with clear headings and readable text
-Contact form with success feedback message
+The community forum uses **Firebase Realtime Database**:
 
-Clean Code Principles
+- Messages load in real time on page load
+- Users can **create** new messages with name, message and category
+- Users can **edit** any message in real time
+- Users can **delete** any message in real time
+- Messages can be **filtered by category** (General, Ayuda, Noticias)
+- Messages are displayed in reverse chronological order
 
-Small and reusable components
-DRY principle applied
-Clear variable naming
-Logical folder structure
-Minimal but meaningful comments
+Configuration is in `src/components/foro/Firebase-setup.js`.
 
+---
 
-🤝 Contributing
-Contributions are welcome.
-If you would like to improve this project:
+## 🎨 UX / UI & Clean Code
 
-Fork the repository
-Create your Feature Branch
-git checkout -b feature/AmazingFeature
-Commit your changes
-git commit -m 'Add AmazingFeature'
-Push to the branch
-git push origin feature/AmazingFeature
-Open a Pull Request
+### User Experience
+- Sticky header with custom logo visible on all pages
+- Hamburger menu for smooth mobile navigation
+- Language switcher always accessible in the header
+- Consistent color palette and typography across all pages
+- Responsive design for mobile, tablet and desktop using Flexbox and media queries
+- Forum with full CRUD and category search
 
+### Clean Code Principles
+- Small and reusable components
+- DRY principle applied throughout
+- Clear and descriptive variable naming
+- Logical folder structure following conventions
+- Minimal but meaningful comments
 
-📄 License
+---
+
+## 🖌 Design Inspiration
+
+This project was inspired by the following Figma design:  
+[Museum Website Figma Template](https://www.figma.com/community/file/1030946541489009680)
+
+---
+
+## 📖 Helpful Tutorials
+
+- [Best README Template](https://github.com/othneildrew/Best-README-Template) — README structure
+- [React Documentation](https://react.dev/)
+- [React Router Documentation](https://reactrouter.com/)
+- [Leaflet Documentation](https://leafletjs.com/)
+- [Firebase Documentation](https://firebase.google.com/docs)
+- [i18next Documentation](https://www.i18next.com/)
+- [MDN Flexbox Guide](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout)
+- [Shopify — Image sizes for web](https://www.shopify.com/es/blog/imagenes-para-web-tamano)
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your Feature Branch: `git checkout -b feature/AmazingFeature`
+3. Commit your changes: `git commit -m 'Add AmazingFeature'`
+4. Push to the branch: `git push origin feature/AmazingFeature`
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
 Distributed under the MIT License.
 
-📬 Contact
-Rita Alexia Marcè Acosta
-GitHub: @alexiamarcee
-Project Link: https://github.com/alexiamarcee/marcy-museum
+---
 
-🙏 Acknowledgments
-Helpful resources:
+## 📬 Contact
 
-Best README Template — README structure inspiration
-React Documentation
-React Router Documentation
-Leaflet Documentation
-React Leaflet Documentation
-Firebase Documentation
-i18next Documentation
-react-i18next Documentation
-MDN Flexbox Guide
-React Icons
-Figma Design Inspiration
-Shields.io
+Rita Alexia Marcè Acosta  
+GitHub: [@alexiamarcee](https://github.com/alexiamarcee)  
+Project: https://github.com/alexiamarcee/marcy-museum
+
+---
+
+## 🙏 Acknowledgments
+
+- [Best README Template](https://github.com/othneildrew/Best-README-Template)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [Shields.io](https://shields.io/)
+- [Figma Community](https://www.figma.com/community)
+- [Firebase](https://firebase.google.com/)

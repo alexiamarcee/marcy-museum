@@ -149,6 +149,52 @@
   box-shadow: 0 2px 8px rgba(179, 124, 107, 0.3);
 }
 
+.toggle-exhibitions-btn {
+  margin-top: 15px;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  background: linear-gradient(135deg, #c4a69f 0%, #b37c6b 100%);
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(196, 166, 159, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.toggle-exhibitions-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.toggle-exhibitions-btn:hover::before {
+  left: 100%;
+}
+
+.toggle-exhibitions-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(179, 124, 107, 0.35);
+}
+
+.toggle-exhibitions-btn:focus-visible {
+  outline: 2px solid #c4a69f;
+  outline-offset: 2px;
+}
+
 @media (max-width: 992px) {
   .header-content {
     padding: 0.75rem 1.5rem;
@@ -229,6 +275,11 @@
   }
 }
 
+.toggle-exhibitions-btn {
+  width: 100%;
+  text-align: center;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -306,6 +357,10 @@
   .hamburger-line {
     background-color: #eaeaea;
   }
+}
+
+.toggle-exhibitions-btn {
+  background: linear-gradient(135deg, #b37c6b 0%, #8e5c4e 100%);
 }
 
 @media (prefers-contrast: high) {

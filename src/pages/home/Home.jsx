@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import ExhibitionCard from "../../components/exhibition-card/ExhibitionCard";
 import exhibitions from "../../data/exhibitions";
@@ -13,9 +14,12 @@ const MUSEUM_COORDINATES = {
 function Home() {
   const { t } = useTranslation();
 
+  // Variable de estado
+  const [showExhibitions, setShowExhibitions] = useState(true);
+
   return (
     <div className="home-wrapper">
-      
+
       <section className="hero-section">
         <div className="hero-content">
           <h1 className="hero-title">{t("hero.title")}</h1>
@@ -28,19 +32,28 @@ function Home() {
         <div className="section-header">
           <h2 className="section-title">{t("exhibitions.currentExhibitions")}</h2>
           <p className="section-description">{t("exhibitions.currentDesc")}</p>
+
+          <button
+            className="toggle-exhibitions-btn"
+            onClick={() => setShowExhibitions(!showExhibitions)}
+          >
+            {showExhibitions ? "Ocultar exposiciones" : "Mostrar exposiciones"}
+          </button>
         </div>
-        
-        <div className="exhibitions-grid">
-          {exhibitions.map((exhibition) => (
-            <ExhibitionCard
-              key={exhibition.id}
-              titleKey={exhibition.titleKey}
-              artist={exhibition.artist}
-              descriptionKey={exhibition.descriptionKey}
-              image={exhibition.image}
-            />
-          ))}
-        </div>
+
+        {showExhibitions && (
+          <div className="exhibitions-grid">
+            {exhibitions.map((exhibition) => (
+              <ExhibitionCard
+                key={exhibition.id}
+                titleKey={exhibition.titleKey}
+                artist={exhibition.artist}
+                descriptionKey={exhibition.descriptionKey}
+                image={exhibition.image}
+              />
+            ))}
+          </div>
+        )}
       </section>
 
       <section className="map-section">
@@ -48,7 +61,7 @@ function Home() {
           <h2 className="section-title">{t("visit.findUs")}</h2>
           <p className="section-description">{t("visit.findUsDesc")}</p>
         </div>
-        
+
         <div className="map-container">
           <MapContainer
             center={[MUSEUM_COORDINATES.lat, MUSEUM_COORDINATES.lng]}
@@ -71,7 +84,7 @@ function Home() {
             </Marker>
           </MapContainer>
         </div>
-        
+
         <div className="map-info">
           <div className="info-card">
             <h3>{t("visit.address")}</h3>

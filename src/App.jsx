@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
+
 import Home from "./pages/home/Home";
 import Exhibitions from "./pages/exhibitions/Exhibitions";
 import Visit from "./pages/visit/Visit";
@@ -15,14 +16,13 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/exhibitions" element={<Exhibitions />} />
           <Route path="/visit" element={<Visit />} />
-          <Route path="/foro" element={<Foro />} /> 
+          <Route path="/foro" element={<Foro />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/cookies" element={<CookiesPolicy />} />
           <Route path="/terms" element={<Terms />} />
@@ -30,7 +30,6 @@ function App() {
           <Route path="/rss" element={<RSS />} />
         </Routes>
       </main>
-
       <Footer />
     </BrowserRouter>
   );

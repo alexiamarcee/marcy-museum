@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LocaleSwitcher from "../../i18n/LocaleSwitcher";
-import logo from "../../assets/photos/logo.png"; // 👈 importa el logo
+import logo from "../../assets/photos/logo.png"; 
 import "./Header.css";
 
 function Header() {
