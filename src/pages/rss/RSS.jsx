@@ -1,48 +1,37 @@
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import "./RSS.css";
 
 function RSS() {
   const { t } = useTranslation();
+  const [items, setItems] = useState([]);
 
-  const feeds = [
-    {
-      name: t("rss.feed1.name"),
-      description: t("rss.feed1.description"),
-      url: "https://www.artnews.com"
-    },
-    {
-      name: t("rss.feed2.name"),
-      description: t("rss.feed2.description"),
-      url: "https://newartfoundation.com"
-    },
-  ];
+  useEffect(() => {
+    fetch("/rss.xml")
+      .then((res) => res.text())
+      .then((str) => {
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(str, "text/xml");
+        const rssItems = Array.from(xml.querySelectorAll("item")).map((item) => ({
+          title: item.querySelector("title")?.textContent,
+          link: item.getElementsByTagName("link")[0]?.textContent,
+          description: item.querySelector("description")?.textContent,
+        }));
+        setItems(rssItems);
+      })
+      .catch(console.error);
+  }, []);
 
   return (
-    <div className="rss-page">
-      <section className="rss-header">
-        <h1>{t("rss.title")}</h1>
-        <p>{t("rss.subtitle")}</p>
-      </section>
-
-      <section className="rss-content">
-        {feeds.map((feed, index) => (
-          <div key={index} className="rss-card">
-            <div className="rss-icon"></div>
-            <div className="rss-info">
-              <h3>{feed.name}</h3>
-              <p>{feed.description}</p>
-              <a
-                href={feed.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rss-link"
-              >
-                {t("rss.link")}
-              </a>
-            </div>
-          </div>
-        ))}
-      </section>
+    <div className="rss-container">
+      <h2>{t("rss.title")}</h2>
+      {items.length === 0 && <p>{t("rss.loading")}</p>}
+      {items.map((item, i) => (
+        <div key={i} className="rss-item">
+          <a href={item.link} target="_blank" rel="noreferrer">{item.title}</a>
+          <p>{item.description}</p>
+        </div>
+      ))}
     </div>
   );
 }

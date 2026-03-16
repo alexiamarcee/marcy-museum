@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LocaleSwitcher from "../../i18n/LocaleSwitcher";
-import logo from "../../assets/photos/logo.png"; // 👈 importa el logo
+import logo from "../../assets/photos/logo.png";
 import "./Header.css";
 
 function Header() {
@@ -16,11 +16,7 @@ function Header() {
     <header className="header-container">
       <div className="header-content">
         <NavLink to="/home" className="logo-container" onClick={closeMenu}>
-          <img
-            src={logo}
-            alt="Marcy Museum"
-            className="museum-logo"
-          />
+          <img src={logo} alt="Marcy Museum" className="museum-logo" />
         </NavLink>
 
         <button
@@ -68,11 +64,15 @@ function Header() {
             className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
             onClick={closeMenu}
           >
-            News
+            {t("nav.rss")}
           </NavLink>
           <LocaleSwitcher />
         </nav>
       </div>
+
+      {isMenuOpen && (
+        <div className="nav-overlay" onClick={closeMenu} />
+      )}
     </header>
   );
 }

@@ -28,6 +28,8 @@
     "planVisit": "Plan Your Visit",
     "planVisitDesc": "Experience these exhibitions in person at Marcy Museum. Open Tuesday through Sunday, 10:00 AM - 7:00 PM.",
     "visitInfo": "Visit Information",
+    "hide": "Hide exhibitions",
+    "show": "Show exhibitions",
     "currentExhibitions": "Current Exhibitions",
     "currentDesc": "Explore our carefully selected exhibitions showcasing diverse artistic voices and perspectives.",
     "artworks": {
@@ -105,10 +107,20 @@
   },
   "foro": {
     "title": "Museum Forum",
-    "description": "Share your thoughts about our exhibitions.",
-    "namePlaceholder": "Your name",
-    "messagePlaceholder": "Your message",
-    "send": "Send",
+    "searchPlaceholder": "All categories",
+    "categories": {
+      "all": "All categories",
+      "general": "General",
+      "ayuda": "Help",
+      "noticias": "News"
+    },
+    "namePlaceholder": "Name",
+    "messagePlaceholder": "Message",
+    "send": "Send"
+  },
+  "messageCard": {
+    "save": "Save",
+    "edit": "Edit",
     "delete": "Delete"
   },
   "contact": {
@@ -157,15 +169,6 @@
   },
   "rss": {
     "title": "News",
-    "subtitle": "Stay updated with the latest news from the contemporary art world. Subscribe to our recommended feeds.",
-    "link": "Visit",
-    "feed1": {
-      "name": "Art News",
-      "description": "Latest news from the art world"
-    },
-    "feed2": {
-      "name": "Art Foundation News",
-      "description": "Art market news, exhibitions and artists"
-    }
+    "loading": "Loading..."
   }
 }

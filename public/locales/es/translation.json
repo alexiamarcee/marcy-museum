@@ -28,6 +28,8 @@
     "planVisit": "Planifica tu Visita",
     "planVisitDesc": "Vive estas exposiciones en persona en el Museo Marcy. Abierto de martes a domingo, 10:00 - 19:00.",
     "visitInfo": "Información de Visita",
+    "hide": "Ocultar exposiciones",
+    "show": "Mostrar exposiciones",
     "currentExhibitions": "Exposiciones Actuales",
     "currentDesc": "Explora nuestras exposiciones seleccionadas con diversas voces y perspectivas artísticas.",
     "artworks": {
@@ -105,11 +107,21 @@
   },
   "foro": {
     "title": "Foro del Museo",
-    "description": "Comparte tu opinión sobre nuestras exposiciones.",
-    "namePlaceholder": "Tu nombre",
-    "messagePlaceholder": "Tu mensaje",
-    "send": "Enviar",
-    "delete": "Eliminar"
+    "searchPlaceholder": "Todas las categorías",
+    "categories": {
+      "all": "Todas las categorías",
+      "general": "General",
+      "ayuda": "Ayuda",
+      "noticias": "Noticias"
+    },
+    "namePlaceholder": "Nombre",
+    "messagePlaceholder": "Mensaje",
+    "send": "Enviar"
+  },
+  "messageCard": {
+    "save": "Guardar",
+    "edit": "Editar",
+    "delete": "Borrar"
   },
   "contact": {
     "title": "Contacto",
@@ -157,15 +169,6 @@
   },
   "rss": {
     "title": "Noticias",
-    "subtitle": "Mantente al día con las últimas noticias del mundo del arte contemporáneo. Suscríbete a nuestros feeds recomendados.",
-    "link": "Visitar",
-    "feed1": {
-      "name": "Art News",
-      "description": "Últimas noticias del mundo del arte"
-    },
-    "feed2": {
-      "name": "Art Foundation News",
-      "description": "Noticias del mercado del arte, exposiciones y artistas"
-    }
+    "loading": "Cargando..."
   }
 }

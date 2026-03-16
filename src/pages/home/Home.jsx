@@ -28,6 +28,13 @@ function Home() {
         <div className="section-header">
           <h2 className="section-title">{t("exhibitions.currentExhibitions")}</h2>
           <p className="section-description">{t("exhibitions.currentDesc")}</p>
+
+          <button
+            className="toggle-exhibitions-btn"
+            onClick={() => setShowExhibitions(!showExhibitions)}
+          >
+            {showExhibitions ? t("exhibitions.hide") : t("exhibitions.show")}
+          </button>
         </div>
         
         <div className="exhibitions-grid">

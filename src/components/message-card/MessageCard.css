@@ -1,46 +1,3 @@
-.foro-container {
-  max-width: 800px;
-  margin: 2em auto;
-  padding: 1em;
-}
-
-.foro-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-  margin-bottom: 2em;
-}
-
-.foro-form input {
-  flex: 1;
-  min-width: 200px;
-  padding: 0.5em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.foro-form button {
-  padding: 0.5em 1.5em;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: background 0.2s;
-}
-
-.foro-form button:hover {
-  background: #e0c068;
-}
-
-.foro-messages {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
 .message-card {
   display: flex;
   justify-content: space-between;
@@ -137,29 +94,8 @@
   background: #c0392b !important;
 }
 
-.no-results {
-  color: #888;
-  text-align: center;
-  padding: 2em;
-}
-
-/* Responsive */
+/* Tablet */
 @media (max-width: 768px) {
-  .foro-container {
-    padding: 1em;
-  }
-
-  .foro-form input,
-  .foro-form select {
-    min-width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .foro-form {
-    flex-direction: column;
-  }
-
   .message-card {
     flex-direction: column;
     align-items: flex-start;
@@ -168,5 +104,17 @@
   .message-actions {
     width: 100%;
     justify-content: flex-end;
+  }
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+  .message-card {
+    padding: 12px 14px;
+  }
+
+  .message-actions button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
   }
 }

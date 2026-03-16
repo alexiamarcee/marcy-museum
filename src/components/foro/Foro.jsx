@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { ref, onValue, push, set, remove } from "firebase/database";
-import { db } from "./Firebase-setup.js";
+import { ref, onValue, push, remove, update, query, limitToLast } from "firebase/database";
+import { db } from "./Firebase-setup";
+import MessageCard from "../message-card/MessageCard";
 import "./Foro.css";
 
 function Foro() {
@@ -9,6 +10,10 @@ function Foro() {
   const [messages, setMessages] = useState([]);
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
+  const [category, setCategory] = useState("general");
+  const [search, setSearch] = useState("");
+  const [editingId, setEditingId] = useState(null);
+  const [editTexts, setEditTexts] = useState({});
 
   useEffect(() => {
     const messagesRef = ref(db, "messages/");
@@ -30,25 +35,47 @@ function Foro() {
 
   const sendMessage = (e) => {
     e.preventDefault();
-    const messagesRef = ref(db, "messages/");
-    const newMessageRef = push(messagesRef);
-    set(newMessageRef, { message: message, sentBy: name })
-      .then(() => console.log("Mensaje enviado"))
-      .catch((error) => console.error("Error:", error));
-    setMessage("");
+    if (!name || !message) return;
+    push(ref(db, "messages/"), { sentBy: name, message, category });
     setName("");
+    setMessage("");
   };
 
-  const deleteMessage = (id) => {
-    const messageRef = ref(db, `messages/${id}`);
-    remove(messageRef)
-      .then(() => console.log("Mensaje eliminado"))
-      .catch((error) => console.error("Error al eliminar:", error));
+  const deleteMessage = (id) => remove(ref(db, `messages/${id}`));
+
+  const startEdit = (msg) => {
+    setEditingId(msg.id);
+    setEditTexts((prev) => ({ ...prev, [msg.id]: msg.message }));
   };
+
+  const updateMessage = (id) => {
+    update(ref(db, `messages/${id}`), { message: editTexts[id] });
+    setEditingId(null);
+    setEditTexts((prev) => {
+      const copy = { ...prev };
+      delete copy[id];
+      return copy;
+    });
+  };
+
+  const filteredMessages = messages.filter((msg) =>
+    search === "" || (msg.category || "general") === search
+  );
 
   return (
     <div className="foro-container">
       <h2>{t("foro.title")}</h2>
+
+      <select
+        className="search-input"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      >
+        <option value="">{t("foro.categories.all")}</option>
+        <option value="general">{t("foro.categories.general")}</option>
+        <option value="ayuda">{t("foro.categories.ayuda")}</option>
+        <option value="noticias">{t("foro.categories.noticias")}</option>
+      </select>
 
       <form onSubmit={sendMessage} className="foro-form">
         <input
@@ -65,6 +92,11 @@ function Foro() {
           onChange={(e) => setMessage(e.target.value)}
           required
         />
+        <select value={category} onChange={(e) => setCategory(e.target.value)}>
+          <option value="general">{t("foro.categories.general")}</option>
+          <option value="ayuda">{t("foro.categories.ayuda")}</option>
+          <option value="noticias">{t("foro.categories.noticias")}</option>
+        </select>
         <button type="submit">{t("foro.send")}</button>
       </form>
 

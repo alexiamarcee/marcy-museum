@@ -138,3 +138,13 @@
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 768px) {
+  .rss-container {
+    padding: 1em 1.5em;
+  }
+
+  .rss-item {
+    padding: 1.2em 1.4em;
+  }
+}
