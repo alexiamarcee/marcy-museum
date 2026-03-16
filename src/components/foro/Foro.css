@@ -151,114 +151,6 @@
   border: none;
   cursor: pointer;
   font-weight: bold;
-  font-size: 0.85rem;
-  transition: background 0.2s;
-}
-
-.message-actions button:first-child {
-  background: #333;
-  color: #fff;
-}
-
-.message-actions button:first-child:hover {
-  background: #555;
-}
-
-.delete-btn {
-  background: #e74c3c !important;
-  color: white !important;
-}
-
-.delete-btn:hover {
-  background: #c0392b !important;
-}
-
-.no-results {
-  color: #888;
-  text-align: center;
-  padding: 2em;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .foro-form {
-    flex-direction: column;
-  }
-
-  .message-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .message-actions {
-    width: 100%;
-    justify-content: flex-end;
-  }
-}.foro-container {
-  max-width: 900px;
-  margin: auto;
-  padding: 2em;
-  color: #f0f0f0;
-}
-
-.foro-container h2 {
-  font-size: 2rem;
-  margin-bottom: 1em;
-  color: #f0f0f0;
-}
-
-.search-input {
-  width: 100%;
-  padding: 10px 14px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  border: 1px solid #444;
-  background: #2a2a2a;
-  color: #f0f0f0;
-  font-size: 1rem;
-  box-sizing: border-box;
-}
-
-.search-input::placeholder {
-  color: #888;
-}
-
-.foro-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 30px;
-}
-
-.foro-form input,
-.foro-form select {
-  flex: 1;
-  min-width: 150px;
-  padding: 10px 14px;
-  border-radius: 8px;
-  border: 1px solid #444;
-  background: #2a2a2a;
-  color: #f0f0f0;
-  font-size: 1rem;
-}
-
-.foro-form input::placeholder {
-  color: #888;
-}
-
-.foro-form select option {
-  background: #2a2a2a;
-  color: #f0f0f0;
-}
-
-.foro-form button {
-  padding: 10px 24px;
-  background: #c9a84c;
-  color: #1a1a1a;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
   font-size: 1rem;
   transition: background 0.2s;
 }
@@ -376,6 +268,17 @@
 }
 
 /* Responsive */
+@media (max-width: 768px) {
+  .foro-container {
+    padding: 1em;
+  }
+
+  .foro-form input,
+  .foro-form select {
+    min-width: 100%;
+  }
+}
+
 @media (max-width: 600px) {
   .foro-form {
     flex-direction: column;

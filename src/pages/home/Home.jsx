@@ -37,7 +37,7 @@ function Home() {
             className="toggle-exhibitions-btn"
             onClick={() => setShowExhibitions(!showExhibitions)}
           >
-            {showExhibitions ? "Ocultar exposiciones" : "Mostrar exposiciones"}
+            {showExhibitions ? t("exhibitions.hide") : t("exhibitions.show")}
           </button>
         </div>
 

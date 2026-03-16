@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import "./RSS.css";
 
 function RSS() {
+  const { t } = useTranslation();
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -22,8 +24,8 @@ function RSS() {
 
   return (
     <div className="rss-container">
-      <h2>Noticias RSS</h2>
-      {items.length === 0 && <p>Cargando...</p>}
+      <h2>{t("rss.title")}</h2>
+      {items.length === 0 && <p>{t("rss.loading")}</p>}
       {items.map((item, i) => (
         <div key={i} className="rss-item">
           <a href={item.link} target="_blank" rel="noreferrer">{item.title}</a>

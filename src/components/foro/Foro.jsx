@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { ref, onValue, push, remove, update, query, limitToLast } from "firebase/database"; import { db } from "./Firebase-setup";
+import { ref, onValue, push, remove, update, query, limitToLast } from "firebase/database";
+import { db } from "./Firebase-setup";
 import MessageCard from "../message-card/MessageCard";
 import "./Foro.css";
 
@@ -13,7 +14,7 @@ function Foro() {
   const [category, setCategory] = useState("general");
   const [search, setSearch] = useState("");
   const [editingId, setEditingId] = useState(null);
-  const [editTexts, setEditTexts] = useState({}); // editText por mensaje
+  const [editTexts, setEditTexts] = useState({});
 
   // Escuchar mensajes desde Firebase
   useEffect(() => {
@@ -35,27 +36,18 @@ function Foro() {
   const sendMessage = (e) => {
     e.preventDefault();
     if (!name || !message) return;
-
-    const messagesRef = ref(db, "messages/");
-    push(messagesRef, {
-      sentBy: name,
-      message,
-      category,
-    });
-
+    push(ref(db, "messages/"), { sentBy: name, message, category });
     setName("");
     setMessage("");
   };
 
-  // Borrar mensaje
   const deleteMessage = (id) => remove(ref(db, `messages/${id}`));
 
-  // Iniciar edición
   const startEdit = (msg) => {
     setEditingId(msg.id);
     setEditTexts((prev) => ({ ...prev, [msg.id]: msg.message }));
   };
-  // Guardar edición
+
   const updateMessage = (id) => {
     update(ref(db, `messages/${id}`), { message: editTexts[id] });
     setEditingId(null);
@@ -66,7 +58,6 @@ function Foro() {
     });
   };
 
-  // Filtrar mensajes por categoría
   const filteredMessages = messages.filter((msg) =>
     search === "" || (msg.category || "general") === search
   );
@@ -80,10 +71,10 @@ function Foro() {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       >
-        <option value="">Todas las categorías</option>
-        <option value="general">General</option>
-        <option value="ayuda">Ayuda</option>
-        <option value="noticias">Noticias</option>
+        <option value="">{t("foro.categories.all")}</option>
+        <option value="general">{t("foro.categories.general")}</option>
+        <option value="ayuda">{t("foro.categories.ayuda")}</option>
+        <option value="noticias">{t("foro.categories.noticias")}</option>
       </select>
 
       <form onSubmit={sendMessage} className="foro-form">
@@ -102,11 +93,11 @@ function Foro() {
           required
         />
         <select value={category} onChange={(e) => setCategory(e.target.value)}>
-          <option value="general">General</option>
-          <option value="ayuda">Ayuda</option>
-          <option value="noticias">Noticias</option>
+          <option value="general">{t("foro.categories.general")}</option>
+          <option value="ayuda">{t("foro.categories.ayuda")}</option>
+          <option value="noticias">{t("foro.categories.noticias")}</option>
         </select>
-        <button type="submit">Enviar</button>
+        <button type="submit">{t("foro.send")}</button>
       </form>
 
       <div className="foro-messages">
