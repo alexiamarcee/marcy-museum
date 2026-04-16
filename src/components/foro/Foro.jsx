@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { ref, onValue, push, remove, update, query, limitToLast } from "firebase/database";
-import { db } from "./Firebase-setup";
+import {
+  subscribeToMessages,
+  addMessage,
+  deleteMessage,
+  updateMessageFields,
+} from "../../services/Firebase-service.js";
 import MessageCard from "../message-card/MessageCard";
 import "./Foro.css";
 
@@ -16,32 +20,31 @@ function Foro() {
   const [editingId, setEditingId] = useState(null);
   const [editTexts, setEditTexts] = useState({});
 
-  // Escuchar mensajes desde Firebase
   useEffect(() => {
-    const messagesRef = query(ref(db, "messages/"), limitToLast(50));
-    const unsubscribe = onValue(messagesRef, (snapshot) => {
-      const data = snapshot.val();
-      if (data) {
-        const list = Object.entries(data)
-          .map(([key, value]) => ({ id: key, category: "general", ...value }))
-          .reverse();
-        setMessages(list);
-      } else {
-        setMessages([]);
-      }
-    });
+    const unsubscribe = subscribeToMessages(
+      (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          const list = Object.entries(data)
+            .map(([key, value]) => ({ id: key, category: "general", ...value }))
+            .reverse();
+          setMessages(list);
+        } else {
+          setMessages([]);
+        }
+      },
+      { limit: 50 }
+    );
     return () => unsubscribe();
   }, []);
-  // Enviar nuevo mensaje
+
   const sendMessage = (e) => {
     e.preventDefault();
     if (!name || !message) return;
-    push(ref(db, "messages/"), { sentBy: name, message, category });
+    addMessage({ sentBy: name, message, category });
     setName("");
     setMessage("");
   };
-
-  const deleteMessage = (id) => remove(ref(db, `messages/${id}`));
 
   const startEdit = (msg) => {
     setEditingId(msg.id);
@@ -49,7 +52,7 @@ function Foro() {
   };
 
   const updateMessage = (id) => {
-    update(ref(db, `messages/${id}`), { message: editTexts[id] });
+    updateMessageFields(id, { message: editTexts[id] });
     setEditingId(null);
     setEditTexts((prev) => {
       const copy = { ...prev };

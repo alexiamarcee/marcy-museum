@@ -1,9 +1,7 @@
-import firebase from "./components/firebase-setup.js";
+import { addMessage, subscribeToMessages } from "../../services/Firebase-service.js";
 
 function listenToNewMessages() {
-  const db = firebase.getDatabase();
-  const messagesRef = firebase.ref(db, 'messages/');
-  firebase.onValue(messagesRef, showMessages);
+  subscribeToMessages(showMessages);
 }
 
 function listenToSentMessageButton() {
@@ -11,11 +9,18 @@ function listenToSentMessageButton() {
 }
 
 function showMessages(snapshot) {
-  let data = snapshot.val();
+  const data = snapshot.val();
+  const messageListElement = document.getElementById("message-list");
+
+  if (!data) {
+    messageListElement.innerHTML = "";
+    return;
+  }
 
   let messageList = "";
-  for (let item in data) {
-    messageList = `
+  for (const item in data) {
+    messageList =
+      `
           <div>
             <div>${data[item].sentBy}:</div>
             <div>${data[item].message}</div>
@@ -23,21 +28,17 @@ function showMessages(snapshot) {
         ` + messageList;
   }
 
-  let messageListElement = document.getElementById("message-list");
   messageListElement.innerHTML = messageList;
 }
 
 function sendMessage(event) {
   event.preventDefault();
-  let formSendMessage = event.target;
+  const formSendMessage = event.target;
 
-  const db = firebase.getDatabase();
-  const messagesRef = firebase.ref(db, 'messages/');
-  const newMessageRef = firebase.push(messagesRef);
-  firebase.set(newMessageRef, {
+  addMessage({
     message: formSendMessage.message.value,
-    sentBy: formSendMessage["sent-by"].value
-  })
+    sentBy: formSendMessage["sent-by"].value,
+  });
 }
 
 listenToNewMessages();
