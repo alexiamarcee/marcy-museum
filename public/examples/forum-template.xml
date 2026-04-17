@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forum>
+  <item>
+    <sentBy>Sample User</sentBy>
+    <message>Example message compatible with forum import.</message>
+    <category>general</category>
+  </item>
+  <item>
+    <sentBy>Marcy Museum</sentBy>
+    <message>Each &lt;item&gt; is a separate message.</message>
+    <category>noticias</category>
+  </item>
+</forum>

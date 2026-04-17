@@ -1,0 +1,12 @@
+[
+  {
+    "sentBy": "Sample User",
+    "message": "This is a sample message you can import into the forum.",
+    "category": "general"
+  },
+  {
+    "sentBy": "Marcy Museum",
+    "message": "Each object must include sentBy, message, and category.",
+    "category": "noticias"
+  }
+]

@@ -75,7 +75,7 @@ The Home page is the main landing page of the application, accessible at both `/
 
 - **Exhibitions** — full grid of all artworks with translated titles and descriptions
 - **Visit** — museum info, opening hours, admission prices, accessibility, parking, interactive map and contact form
-- **Forum** — community forum with real-time Firebase integration (read, create, edit and delete messages, with category filter, export/import in JSON, CSV and XML). Example import files: [JSON](public/ejemplos/plantilla-foro.json) · [CSV](public/ejemplos/plantilla-foro.csv) · [XML](public/ejemplos/plantilla-foro.xml)
+- **Forum** — community forum with real-time Firebase integration (read, create, edit and delete messages, with category filter, export/import in JSON, CSV and XML). Example import files: [JSON](public/examples/forum-template.json) · [CSV](public/examples/forum-template.csv) · [XML](public/examples/forum-template.xml)
 - **News** — RSS news feed with the latest museum updates
 - **Legal pages** — Privacy Policy, Cookies Policy, Terms & Conditions and Contact, all translated into three languages
 
@@ -156,7 +156,7 @@ Marcy Museum allows users to:
 - Switch between English, Spanish and French using the language switcher in the header
 - View museum location via interactive Leaflet map
 - Post, edit and delete messages in the community forum in real time via Firebase
-- Export and import forum messages (JSON, CSV, XML); use the [example templates in `public/ejemplos/`](public/ejemplos/plantilla-foro.json) as a starting point
+- Export and import forum messages (JSON, CSV, XML); use the [example templates in `public/examples/`](public/examples/forum-template.json) as a starting point
 - Filter forum messages by category
 - Read the latest museum news via RSS feed
 - Access contact form and museum information
@@ -185,10 +185,10 @@ marcy-museum/
 ├── public/
 │   ├── rss.xml                # RSS feed file
 │   ├── vite.svg
-│   ├── ejemplos/              # Forum import template examples (JSON, CSV, XML)
-│   │   ├── plantilla-foro.json
-│   │   ├── plantilla-foro.csv
-│   │   └── plantilla-foro.xml
+│   ├── examples/              # Forum import template examples (JSON, CSV, XML)
+│   │   ├── forum-template.json
+│   │   ├── forum-template.csv
+│   │   └── forum-template.xml
 │   └── locales/               # i18n translation files
 │       ├── en/translation.json
 │       ├── es/translation.json
@@ -268,15 +268,15 @@ Configuration is in `src/components/foro/Firebase-setup.js`. Forum data access i
 
 ## 📥 Forum import templates
 
-Sample files in `public/ejemplos/` match the import/export format (`sentBy`, `message`, `category`). Use them as copy-paste references or download them from the repository:
+Sample files in `public/examples/` match the import/export format (`sentBy`, `message`, `category`). Use them as copy-paste references or download them from the repository:
 
-| Format | Repository file | Live site (Firebase Hosting) |
-|--------|-------------------|------------------------------|
-| JSON | [plantilla-foro.json](public/ejemplos/plantilla-foro.json) | [plantilla-foro.json](https://marcy-museum.web.app/ejemplos/plantilla-foro.json) |
-| CSV | [plantilla-foro.csv](public/ejemplos/plantilla-foro.csv) | [plantilla-foro.csv](https://marcy-museum.web.app/ejemplos/plantilla-foro.csv) |
-| XML | [plantilla-foro.xml](public/ejemplos/plantilla-foro.xml) | [plantilla-foro.xml](https://marcy-museum.web.app/ejemplos/plantilla-foro.xml) |
+| Format | File |
+|--------|------|
+| JSON | [forum-template.json](public/examples/forum-template.json) |
+| CSV | [forum-template.csv](public/examples/forum-template.csv) |
+| XML | [forum-template.xml](public/examples/forum-template.xml) |
 
-When running locally with Vite, the same paths are available under `http://localhost:5173/ejemplos/…` (default port).
+When running locally with Vite, they are also served at `http://localhost:5173/examples/…` (default port).
 
 ---
 
