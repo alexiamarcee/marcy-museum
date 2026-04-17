@@ -272,7 +272,6 @@ function Foro() {
     try {
       const text = await file.text();
       const rows = parseForumImportFile(file.name, text);
-      console.log(rows);
       const count = await importMessages(rows);
       if (count === 0) {
         setImportStatus({ type: "empty", key: "foro.import.empty" });

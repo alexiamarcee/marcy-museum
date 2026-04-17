@@ -198,7 +198,7 @@ marcy-museum/
 │   ├── components/
 │   │   ├── exhibition-card/
 │   │   ├── footer/
-│   │   ├── foro/              # Forum with Firebase CRUD
+│   │   ├── foro/              # Forum feature UI (component + styles)
 │   │   ├── header/
 │   │   └── message-card/
 │   ├── data/
@@ -206,12 +206,13 @@ marcy-museum/
 │   ├── i18n/
 │   ├── pages/
 │   │   ├── exhibitions/
+│   │   ├── foro/              # Forum route page
 │   │   ├── home/
 │   │   ├── locations/
 │   │   ├── policy/
 │   │   ├── rss/               # News RSS page
 │   │   └── visit/
-│   ├── services/
+│   ├── services/              # Firebase setup + data services
 │   ├── App.jsx
 │   └── main.jsx
 ├── firebase.json
@@ -262,7 +263,7 @@ The community forum uses **Firebase Realtime Database**:
 - Messages are displayed in reverse chronological order
 - Messages can be **exported** and **imported** in JSON, CSV or XML (via the forum UI)
 
-Configuration is in `src/services/Firebase-setup.js`. Forum data access is centralized in `src/services/Firebase-service.js`.
+Configuration is in `src/services/Firebase-setup.js`. Forum data access is centralized in `src/services/Firebase-service.js`, and the forum route is mounted from `src/pages/foro/Foro.jsx`.
 
 ---
 

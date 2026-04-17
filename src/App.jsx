@@ -9,7 +9,7 @@ import PrivacyPolicy from "./pages/policy/PrivacyPolicy";
 import CookiesPolicy from "./pages/policy/CookiesPolicy";
 import Terms from "./pages/policy/Terms";
 import Contact from "./pages/policy/Contact";
-import Foro from "./components/foro/Foro";
+import Foro from "./pages/foro/Foro";
 import RSS from "./pages/rss/RSS";
 
 function App() {
