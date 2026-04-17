@@ -27,6 +27,99 @@
   color: #888;
 }
 
+.foro-export {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.foro-export-label {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.foro-export-select {
+  flex: 1;
+  min-width: 140px;
+  max-width: 220px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #2a2a2a;
+  color: #f0f0f0;
+  font-size: 1rem;
+}
+
+.foro-export-select option {
+  background: #2a2a2a;
+  color: #f0f0f0;
+}
+
+.foro-export-btn {
+  padding: 10px 20px;
+  background: #3a3a3a;
+  color: #f0f0f0;
+  border-radius: 8px;
+  border: 1px solid #555;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.foro-export-btn:hover {
+  background: #4a4a4a;
+  border-color: #c9a84c;
+}
+
+.foro-import-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background: #2d3d2d;
+  color: #c8e6c9;
+  border-radius: 8px;
+  border: 1px solid #4a6b4a;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.foro-import-btn:hover:not(.foro-import-btn--busy) {
+  background: #3a4f3a;
+  border-color: #7dcf8a;
+}
+
+.foro-import-btn--busy {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.foro-import-btn input[type="file"] {
+  display: none;
+}
+
+.foro-import-msg {
+  margin: 0 0 16px;
+  font-size: 0.95rem;
+}
+
+.foro-import-msg--ok {
+  color: #7dcf8a;
+}
+
+.foro-import-msg--empty {
+  color: #e0c068;
+}
+
+.foro-import-msg--err {
+  color: #f0a0a0;
+}
+
 .foro-form {
   display: flex;
   flex-wrap: wrap;

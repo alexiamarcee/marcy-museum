@@ -116,7 +116,24 @@
     },
     "namePlaceholder": "Nom",
     "messagePlaceholder": "Message",
-    "send": "Envoyer"
+    "send": "Envoyer",
+    "export": {
+      "formatLabel": "Format d'exportation",
+      "button": "Télécharger",
+      "json": "JSON",
+      "csv": "CSV",
+      "xml": "XML"
+    },
+    "import": {
+      "button": "Importer un fichier",
+      "loading": "Importation…",
+      "successTitle": "Importation réussie",
+      "emptyTitle": "Information",
+      "errorTitle": "Erreur d'importation",
+      "success": "{{count}} message(s) importé(s).",
+      "empty": "Aucun message importé (chaque ligne doit avoir un nom et un texte).",
+      "error": "Impossible de lire le fichier. Utilisez JSON, CSV ou XML exportés depuis ce forum."
+    }
   },
   "messageCard": {
     "save": "Sauvegarder",

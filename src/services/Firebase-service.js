@@ -33,3 +33,16 @@ export function deleteMessage(id) {
 export function updateMessageFields(id, fields) {
   return update(ref(db, `${MESSAGES_PATH}${id}`), fields);
 }
+
+export async function importMessages(rows) {
+  let count = 0;
+  for (const row of rows) {
+    const sentBy = String(row.sentBy ?? "").trim();
+    const message = String(row.message ?? "").trim();
+    const category = String(row.category ?? "general").trim() || "general";
+    if (!sentBy || !message) continue;
+    await addMessage({ sentBy, message, category });
+    count += 1;
+  }
+  return count;
+}

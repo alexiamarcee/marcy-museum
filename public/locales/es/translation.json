@@ -116,7 +116,24 @@
     },
     "namePlaceholder": "Nombre",
     "messagePlaceholder": "Mensaje",
-    "send": "Enviar"
+    "send": "Enviar",
+    "export": {
+      "formatLabel": "Formato de exportación",
+      "button": "Descargar",
+      "json": "JSON",
+      "csv": "CSV",
+      "xml": "XML"
+    },
+    "import": {
+      "button": "Importar archivo",
+      "loading": "Importando…",
+      "successTitle": "Importación correcta",
+      "emptyTitle": "Aviso",
+      "errorTitle": "Error al importar",
+      "success": "Se importaron {{count}} mensaje(s).",
+      "empty": "No se importó ningún mensaje (cada fila necesita nombre y texto).",
+      "error": "No se pudo leer el archivo. Usa JSON, CSV o XML exportados desde este foro."
+    }
   },
   "messageCard": {
     "save": "Guardar",
