@@ -262,7 +262,7 @@ The community forum uses **Firebase Realtime Database**:
 - Messages are displayed in reverse chronological order
 - Messages can be **exported** and **imported** in JSON, CSV or XML (via the forum UI)
 
-Configuration is in `src/components/foro/Firebase-setup.js`. Forum data access is centralized in `src/services/Firebase-service.js`.
+Configuration is in `src/services/Firebase-setup.js`. Forum data access is centralized in `src/services/Firebase-service.js`.
 
 ---
 

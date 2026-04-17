@@ -8,8 +8,9 @@ const firebaseConfig = {
   storageBucket: "foromuseo.firebasestorage.app",
   messagingSenderId: "884434435831",
   appId: "1:884434435831:web:e654060a613a852509ddf2",
-  databaseURL: "https://foromuseo-default-rtdb.europe-west1.firebasedatabase.app" 
+  databaseURL: "https://foromuseo-default-rtdb.europe-west1.firebasedatabase.app",
 };
 
 const app = initializeApp(firebaseConfig);
 export const db = getDatabase(app);
+

@@ -8,7 +8,7 @@ import {
   set,
   update,
 } from "firebase/database";
-import { db } from "../components/foro/Firebase-setup.js";
+import { db } from "./Firebase-setup.js";
 
 const MESSAGES_PATH = "messages/";
 
